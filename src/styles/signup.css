@@ -1,0 +1,48 @@
+.signup-container {
+  display: flex;
+}
+
+.signup-container .signup-form {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-container .signup-background {
+  width: 50%;
+  padding: 40px;
+  background-image: url("/public/images/background/sign-up.jpg");
+  background-size: cover;
+}
+
+.signup-form .form-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.signup-form .form-element {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-element .form-group,
+.form-element .btn {
+  width: 100%;
+}
+
+.login {
+  margin-top: 40px;
+  padding: 20px 0px;
+  width: 360px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}

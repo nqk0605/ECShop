@@ -1,0 +1,55 @@
+.login-container {
+  display: flex;
+}
+
+.login-container .login-form {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container .login-background {
+  width: 50%;
+  padding: 40px;
+  background-image: url("/public/images/background/login.jpg");
+  background-size: cover;
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.login-form .form-element {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-element .form-group,
+.form-element .btn {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.sign-up {
+  margin-top: 40px;
+  padding: 20px 0px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
