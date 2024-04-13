@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -58,13 +59,13 @@ const Footer = () => {
           <div className="row">
             <div className="my-2 col-12 col-md-4">
               <div className="d-flex justify-content-center mb-3">
-                <a href="/">
+                <Link to="/">
                   <img
-                    src="/public/images/logo.png"
+                    src="/images/logo.png"
                     alt="Logo"
                     className="logo mb-2"
                   />
-                </a>
+                </Link>
               </div>
               <p className="text-secondary mb-3">
                 We have clothes that will give you a new
@@ -72,200 +73,200 @@ const Footer = () => {
                 your purchase.
               </p>
               <div className="social d-flex mt-5">
-                <a
-                  href="https://www.facebook.com/"
+                <Link
+                  to="https://www.facebook.com/"
                   className="social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
                 >
                   <i className="bi bi-facebook" />
-                </a>
-                <a
-                  href="https://github.com/nqk0605"
+                </Link>
+                <Link
+                  to="https://github.com/nqk0605"
                   className="mx-2 social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
                   target="_blank"
                 >
                   <i className="bi bi-github" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/"
+                </Link>
+                <Link
+                  to="https://www.linkedin.com/"
                   className="mx-2 social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
                   target="_blank"
                 >
                   <i className="bi bi-linkedin" />
-                </a>
-                <a
-                  href="https://www.instagram.com/"
+                </Link>
+                <Link
+                  to="https://www.instagram.com/"
                   className="mx-2 social-icon d-flex text-black bg-white rounded-circle justify-content-center align-items-center fs-5"
                   target="_blank"
                 >
                   <i className="bi bi-instagram" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="footer-links my-2 col-6 col-md-2">
-              <a
+              <Link
                 className="text-decoration-none text-dark"
-                href="/"
+                to="/"
               >
                 <h1 className="fs-3 mb-3">Company</h1>
-              </a>
+              </Link>
               <ul className="list-unstyled p-0">
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/about"
+                    to="/about"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Feature
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Works
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/member"
+                    to="/member"
                   >
                     Career
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="footer-links my-2 col-6 col-md-2">
-              <a
+              <Link
                 className="text-decoration-none text-dark"
-                href="/"
+                to="/"
               >
                 <h1 className="fs-3 mb-3">Help</h1>
-              </a>
+              </Link>
               <ul className="list-unstyled p-0">
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Customer Support
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Delivery Details
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="footer-links my-2 col-6 col-md-2">
-              <a
+              <Link
                 className="text-decoration-none text-dark"
-                href="/"
+                to="/"
               >
                 <h1 className="fs-3 mb-3">FAQ</h1>
-              </a>
+              </Link>
               <ul className="list-unstyled p-0">
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/login"
+                    to="/login"
                   >
                     Account
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Manage Deliveries
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/shop"
+                    to="/shop"
                   >
                     Orders
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/cart"
+                    to="/cart"
                   >
                     Payments
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="footer-links my-2 col-6 col-md-2">
-              <a
+              <Link
                 className="text-decoration-none text-dark"
-                href="/"
+                to="/"
               >
                 <h1 className="fs-3 mb-3">Resources</h1>
-              </a>
+              </Link>
               <ul className="list-unstyled p-0">
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Free eBooks
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Development Tutorial
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     How to - Blog
-                  </a>
+                  </Link>
                 </li>
                 <li className="my-2">
-                  <a
+                  <Link
                     className="text-secondary text-decoration-none"
-                    href="/"
+                    to="/"
                   >
                     Youtube Playlist
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -275,18 +276,18 @@ const Footer = () => {
                 All Rights Reserved 2024 ©
               </div>
               <div className="text-end">
-                <a href="/" className="text-black mx-2">
+                <Link to="/" className="text-black mx-2">
                   <i className="bi bi-credit-card-fill" />
-                </a>
-                <a href="/" className="text-black mx-2">
+                </Link>
+                <Link to="/" className="text-black mx-2">
                   <i className="bi bi-credit-card" />
-                </a>
-                <a href="/" className="text-black mx-2">
+                </Link>
+                <Link to="/" className="text-black mx-2">
                   <i className="bi bi-credit-card-2-front-fill" />
-                </a>
-                <a href="/" className="text-black mx-2">
+                </Link>
+                <Link to="/" className="text-black mx-2">
                   <i className="bi bi-paypal" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

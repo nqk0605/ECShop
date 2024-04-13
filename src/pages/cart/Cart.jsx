@@ -2,12 +2,20 @@
 import React, { Fragment } from "react";
 import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/cartContext/cartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, increaseProduct, decreaseProduct, deleteProduct } = useCart();
+  const {
+    cart,
+    increaseProduct,
+    decreaseProduct,
+    deleteProduct,
+  } = useCart();
   console.log(cart);
   const totalPrice = Number(
-    cart.reduce((a, b) => a + b.price * b.quantity, 0).toFixed(2)
+    cart
+      .reduce((a, b) => a + b.price * b.quantity, 0)
+      .toFixed(2)
   );
 
   const handlePay = () => {
@@ -31,32 +39,34 @@ const Cart = () => {
                       >
                         <div className="row align-items-center">
                           <div className="col-3">
-                            <a href="product.html" target="_blank">
+                            <Link
+                              to={`/product-detail/${product.id}`}
+                            >
                               <img
                                 loading="lazy"
                                 className="img-fluid w-100 rounded-3"
                                 src={product.image1}
                                 alt="cart-item"
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-9">
                             <div className="d-flex w-100 align-items-center">
                               <div className="flex-grow-1">
                                 <h1 className="fs-4 fw-bold">
-                                  <a
-                                    href="product.html"
-                                    className="text-decoration-none text-black"
-                                    target="_blank"
-                                  >
+                                  <span className="text-decoration-none text-black">
                                     {product.name}
-                                  </a>
+                                  </span>
                                 </h1>
                               </div>
                               <div>
                                 <button
                                   className="btn fs-4 text-danger del-btn"
-                                  onClick={() => deleteProduct(product.id)}
+                                  onClick={() =>
+                                    deleteProduct(
+                                      product.id
+                                    )
+                                  }
                                 >
                                   <i className="bi bi-trash-fill" />
                                 </button>
@@ -72,14 +82,16 @@ const Cart = () => {
                                     <strike>
                                       {Math.round(
                                         product.price /
-                                          (1 - product.percentSalesOff)
+                                          (1 -
+                                            product.percentSalesOff)
                                       ) + "$"}
                                     </strike>
                                   </div>
                                   <div className="mx-1">
                                     <span className="bg-danger-subtle rounded-pill px-2 py-1">
                                       {Math.round(
-                                        product.percentSalesOff * 100
+                                        product.percentSalesOff *
+                                          100
                                       ) + "%"}
                                     </span>
                                   </div>
@@ -89,7 +101,11 @@ const Cart = () => {
                                 <div className="mx-1">
                                   <button
                                     className="btn fs-5 rounded-pill"
-                                    onClick={() => increaseProduct(product.id)}
+                                    onClick={() =>
+                                      increaseProduct(
+                                        product.id
+                                      )
+                                    }
                                   >
                                     <i className="bi bi-plus" />
                                   </button>
@@ -100,8 +116,14 @@ const Cart = () => {
                                 <div className="mx-1">
                                   <button
                                     className="btn fs-5 rounded-pill"
-                                    onClick={() => decreaseProduct(product.id)}
-                                    disabled={product.quantity === 0}
+                                    onClick={() =>
+                                      decreaseProduct(
+                                        product.id
+                                      )
+                                    }
+                                    disabled={
+                                      product.quantity === 0
+                                    }
                                   >
                                     <i className="bi bi-dash" />
                                   </button>
@@ -117,35 +139,49 @@ const Cart = () => {
               <div className="col-md-5 my-2">
                 <div className="order-summery border border-1 rounded-4 py-3 px-4">
                   <div className="order-summery">
-                    <h1 className="fs-4 fw-bold">Order summary</h1>
+                    <h1 className="fs-4 fw-bold">
+                      Order summary
+                    </h1>
                   </div>
                   <div className="order-price">
                     <div className="w-100 d-flex mt-4 my-2 fs-5">
-                      <div className="flex-grow-1">Total Price</div>
-                      <div className="text-secondary">{totalPrice}</div>
+                      <div className="flex-grow-1">
+                        Total Price
+                      </div>
+                      <div className="text-secondary">
+                        {totalPrice}
+                      </div>
                     </div>
                     <div className="w-100 d-flex my-3 fs-5">
-                      <div className="flex-grow-1">Shipment cost</div>
-                      <div className="text-secondary">$3</div>
+                      <div className="flex-grow-1">
+                        Shipment cost
+                      </div>
+                      <div className="text-secondary">
+                        $3
+                      </div>
                     </div>
                     <hr />
                     <div className="w-100 d-flex my-3 fs-5 fw-bold">
-                      <div className="flex-grow-1">Total</div>
+                      <div className="flex-grow-1">
+                        Total
+                      </div>
                       <div className="text-secondary">
                         {totalPrice + 3 + "$"}
                       </div>
                     </div>
                     <div className="w-100 mt-4 my-2 fs-5">
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className={`btn main-btn text-white w-100 px-6 py-3 rounded-pill ${
-                          cart.length === 0 ? "disabled" : ""
+                          cart.length === 0
+                            ? "disabled"
+                            : ""
                         }`}
                         onClick={handlePay}
                       >
                         Pay &nbsp;
                         <i className="bi bi-arrow-left" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

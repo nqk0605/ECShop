@@ -8,6 +8,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { PRODUCTS } from "../../../public/data/data";
 import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/cartContext/cartContext";
+import { ToastContainer, toast } from "react-toastify";
 
 const ProductDetail = () => {
   const { state } = useLocation();
@@ -48,11 +49,18 @@ const ProductDetail = () => {
 
   const handleAddProduct = (product) => {
     addToCart({ ...product, quantity: 1 });
+    toast.success("Add product to cart successfully!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+    });
   };
 
   return (
     <Fragment>
       <Loader></Loader>
+      <ToastContainer />
       <div className="container-fluid p-0">
         <section className="container mb-5">
           <hr />

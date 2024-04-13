@@ -6,7 +6,10 @@ import Loader from "../../components/Loader/Loader";
 import { auth } from "../../config/firebaseConfig";
 import { toast, ToastContainer } from "react-toastify";
 import { useAuth } from "../../context/authContext/authContext";
-import { checkEmail, checkLongPassword } from "../../utils/validateForm";
+import {
+  checkEmail,
+  checkLongPassword,
+} from "../../utils/validateForm";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,8 +20,8 @@ const Login = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
     if (
-      emailRef.current.value.trim().length > 0 &&
-      passwordRef.current.value.trim().length > 0
+      emailRef.current?.value.trim().length > 0 &&
+      passwordRef.current?.value.trim().length > 0
     ) {
       if (
         checkEmail(emailRef.current.value.trim()) &&
@@ -68,6 +71,7 @@ const Login = () => {
                   </label>
                   <input
                     type="email"
+                    ref={emailRef}
                     className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
@@ -80,6 +84,7 @@ const Login = () => {
                   </label>
                   <input
                     type="password"
+                    ref={passwordRef}
                     className="form-control"
                     id="exampleInputPassword1"
                     placeholder="Password"
@@ -87,6 +92,7 @@ const Login = () => {
                 </div>
                 <button
                   type="submit"
+                  onClick={handleLogin}
                   className="btn btn-primary"
                 >
                   Submit

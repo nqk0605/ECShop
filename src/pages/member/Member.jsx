@@ -2,6 +2,7 @@
 import React, { Fragment } from "react";
 import Loader from "../../components/Loader/Loader";
 import { MEMBER } from "../../constants/member.constant.js";
+import { Link } from "react-router-dom";
 
 const Member = () => {
   return (
@@ -19,8 +20,8 @@ const Member = () => {
             >
               <div className="member-container h-100 position-relative pointer-cursor">
                 <div className="member-container bg-transparent h-75 p-2 rounded-3">
-                  <a
-                    href={member.url}
+                  <Link
+                    to={member.url}
                     target="_blank"
                     className="text-decoration-none"
                   >
@@ -35,7 +36,7 @@ const Member = () => {
                         {member.name}
                       </h6>
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

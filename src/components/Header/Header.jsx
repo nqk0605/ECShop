@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import React, { Fragment, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { HEADER_ITEMS } from "../../constants/common.constant";
 import { useAuth } from "../../context/authContext/authContext";
 
@@ -8,7 +8,8 @@ const Header = () => {
   const navigate = useNavigate();
   const { account, logout } = useAuth();
   const inputRef = useRef();
-  const [isNoticeVisible, setIsNoticeVisible] = useState(true);
+  const [isNoticeVisible, setIsNoticeVisible] =
+    useState(true);
 
   const closeNotice = () => {
     setIsNoticeVisible(false);
@@ -17,7 +18,9 @@ const Header = () => {
   const handlePressEnter = (event) => {
     if (event.key === "Enter") {
       if (inputRef.current.value.trim().length > 0) {
-        navigate(`/shop?search=${inputRef.current.value.trim()}`);
+        navigate(
+          `/shop?search=${inputRef.current.value.trim()}`
+        );
       } else {
         navigate("/shop");
       }
@@ -40,13 +43,13 @@ const Header = () => {
 
   return (
     <Fragment>
-      {isNoticeVisible && (
+      {isNoticeVisible && !account && (
         <div className="header-notice w-100 d-flex py-2 fs-6 position-relative">
           <div className="text-center flex-grow-1">
             Sign up and get up to 30% off.
-            <a href="/signup" className="text-white">
+            <Link to="/signup" className="text-white">
               Sign up!
-            </a>
+            </Link>
           </div>
           <div
             className="px-2 text-white pointer-cursor signup-dismiss"
@@ -64,9 +67,13 @@ const Header = () => {
             <button className="btn mx-1 text-black fs-5 open-menu d-block d-md-none">
               <i className="bi bi-list" />
             </button>
-            <a href="/">
-              <img src="/public/images/logo.png" alt="Logo" className="logo" />
-            </a>
+            <Link to="/">
+              <img
+                src="/images/logo.png"
+                alt="Logo"
+                className="logo"
+              />
+            </Link>
           </div>
           <div className="flex-grow-1 mx-2">
             <div className="row d-flex d-md-none">
@@ -98,14 +105,13 @@ const Header = () => {
               <div className="col-5 d-flex align-items-center">
                 <ul className="header-menu-list">
                   {HEADER_ITEMS.map((item) => (
-                    <li
-                      className="mx-2"
-                      key={item.id}
-                      onClick={() => navigate(item.url)}
-                    >
-                      <a className="text-decoration-none text-black main-menu-link position-relative">
+                    <li className="mx-2" key={item.id}>
+                      <Link
+                        to={item.url}
+                        className="text-decoration-none text-black main-menu-link position-relative"
+                      >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -124,7 +130,7 @@ const Header = () => {
                 className="mx-2 fw-bolder text-decoration-none text-black fs-5"
                 onClick={handleLogout}
               >
-                <i class="bi bi-box-arrow-right"></i>
+                <i className="bi bi-box-arrow-right"></i>
               </button>
             ) : (
               <Link
