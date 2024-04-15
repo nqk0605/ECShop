@@ -1,5 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React, { Fragment, useState } from "react";
+import React, {
+  Fragment,
+  useEffect,
+  useState,
+} from "react";
 import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/cartContext/cartContext";
 import { Link } from "react-router-dom";
@@ -13,13 +17,21 @@ const Cart = () => {
     deleteProduct,
   } = useCart();
   console.log(cart);
-  const totalPrice = Number(
-    cart
-      .reduce((a, b) => a + b.price * b.quantity, 0)
-      .toFixed(2)
-  );
 
   const [cartCleared, setCartCleared] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    let newTotalPrice = 0;
+    if (!cartCleared) {
+      newTotalPrice = Number(
+        cart
+          .reduce((a, b) => a + b.price * b.quantity, 0)
+          .toFixed(2)
+      );
+    }
+    setTotalPrice(newTotalPrice);
+  }, [cart, cartCleared]);
 
   if (cartCleared) {
     cart.splice(0, cart.length);
@@ -33,7 +45,6 @@ const Cart = () => {
       closeOnClick: true,
     });
     setCartCleared(true);
-    cart.price = 0;
   };
 
   return (
