@@ -126,12 +126,15 @@ const Header = () => {
               <i className="bi bi-cart" />
             </button>
             {account.trim().length > 0 ? (
-              <button
-                className="mx-2 fw-bolder text-decoration-none text-black fs-5"
-                onClick={handleLogout}
-              >
-                <i className="bi bi-box-arrow-right"></i>
-              </button>
+              <div className="user-profile mx-2 d-flex align-items-center">
+                <span className="me-2">{account}</span>
+                <button
+                  className="mx-2 fw-bolder text-decoration-none text-black fs-5"
+                  onClick={handleLogout}
+                >
+                  <i className="bi bi-box-arrow-right"></i>
+                </button>
+              </div>
             ) : (
               <Link
                 to="/login"
