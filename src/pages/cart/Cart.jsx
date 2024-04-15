@@ -1,9 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-import React, {
-  Fragment,
-  useEffect,
-  useState,
-} from "react";
+/* eslint-disable no-unused-vars */
+import React, { Fragment } from "react";
 import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/cartContext/cartContext";
 import { Link } from "react-router-dom";
@@ -15,27 +11,14 @@ const Cart = () => {
     increaseProduct,
     decreaseProduct,
     deleteProduct,
+    resetCart,
   } = useCart();
-  console.log(cart);
 
-  const [cartCleared, setCartCleared] = useState(false);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  useEffect(() => {
-    let newTotalPrice = 0;
-    if (!cartCleared) {
-      newTotalPrice = Number(
-        cart
-          .reduce((a, b) => a + b.price * b.quantity, 0)
-          .toFixed(2)
-      );
-    }
-    setTotalPrice(newTotalPrice);
-  }, [cart, cartCleared]);
-
-  if (cartCleared) {
-    cart.splice(0, cart.length);
-  }
+  const totalPrice = Number(
+    cart
+      .reduce((a, b) => a + b.price * b.quantity, 0)
+      .toFixed(2)
+  );
 
   const handlePay = () => {
     toast.success("Pay Successfully!", {
@@ -44,7 +27,7 @@ const Cart = () => {
       hideProgressBar: false,
       closeOnClick: true,
     });
-    setCartCleared(true);
+    resetCart();
   };
 
   return (
@@ -175,24 +158,29 @@ const Cart = () => {
                         Total Price
                       </div>
                       <div className="text-secondary">
-                        {totalPrice}
+                        {totalPrice + " $"}
                       </div>
                     </div>
-                    <div className="w-100 d-flex my-3 fs-5">
-                      <div className="flex-grow-1">
-                        Shipment cost
+                    {cart.length > 0 && (
+                      <div className="w-100 d-flex my-3 fs-5">
+                        <div className="flex-grow-1">
+                          Shipment cost
+                        </div>
+                        <div className="text-secondary">
+                          3 $
+                        </div>
                       </div>
-                      <div className="text-secondary">
-                        $3
-                      </div>
-                    </div>
+                    )}
                     <hr />
                     <div className="w-100 d-flex my-3 fs-5 fw-bold">
                       <div className="flex-grow-1">
                         Total
                       </div>
                       <div className="text-secondary">
-                        {totalPrice + 3 + "$"}
+                        {`${
+                          totalPrice +
+                          (cart.length > 0 ? 3 : 0)
+                        } $`}
                       </div>
                     </div>
                     <div className="w-100 mt-4 my-2 fs-5">
