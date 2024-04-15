@@ -5,7 +5,7 @@ import Loader from "../../components/Loader/Loader";
 const About = () => {
   return (
     <Fragment>
-      <Loader></Loader>
+      <Loader />
     </Fragment>
   );
 };

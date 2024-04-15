@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -14,14 +15,25 @@ const Footer = () => {
     const emailPattern =
       /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;
     if (email.trim() !== "" && emailPattern.test(email)) {
-      alert("Thank you for visiting our store!");
+      toast.success("Thank you for visiting our store!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+      });
     } else {
-      alert("Please enter a valid email address!");
+      toast.error("Please enter a valid email address!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+      });
     }
   };
 
   return (
     <Fragment>
+      <ToastContainer />
       <div className="newsletter px-3">
         <div className="container px-3 py-4 rounded-4">
           <div className="row">
@@ -35,7 +47,7 @@ const Footer = () => {
                 <div className="w-100 my-2">
                   <input
                     type="email"
-                    className="form-control rounded-pill px-5 py-2"
+                    className="form-control rounded-pill px-5 py-2 text-center"
                     placeholder="Enter your email address"
                     value={email}
                     onChange={handleInputChange}

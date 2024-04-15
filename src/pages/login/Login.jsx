@@ -57,8 +57,8 @@ const Login = () => {
 
   return (
     <Fragment>
-      <ToastContainer />
       <Loader />
+      <ToastContainer />
       <section className="container mb-5">
         <div className="container-fluid p-0">
           <div className="login-container">

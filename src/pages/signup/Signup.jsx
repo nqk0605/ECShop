@@ -5,7 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import Loader from "../../components/Loader/Loader";
 import { auth } from "../../config/firebaseConfig";
-import { checkEmail, checkLongPassword } from "../../utils/validateForm";
+import {
+  checkEmail,
+  checkLongPassword,
+} from "../../utils/validateForm";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -23,11 +26,12 @@ const Signup = () => {
         checkLongPassword(passwordRef.current.value.trim())
       ) {
         try {
-          const response = await createUserWithEmailAndPassword(
-            auth,
-            emailRef.current.value,
-            passwordRef.current.value
-          );
+          const response =
+            await createUserWithEmailAndPassword(
+              auth,
+              emailRef.current.value,
+              passwordRef.current.value
+            );
           console.log(response);
           navigate("/login");
         } catch (error) {
@@ -51,8 +55,8 @@ const Signup = () => {
 
   return (
     <Fragment>
-      <ToastContainer />
       <Loader />
+      <ToastContainer />
       <section className="container mb-5">
         <div className="container-fluid p-0">
           <div className="signup-container">
@@ -61,7 +65,9 @@ const Signup = () => {
               <h2 className="form-title">Sign Up</h2>
               <form className="form-element">
                 <div className="form-group">
-                  <label htmlFor="exampleInputEmail1">Email address</label>
+                  <label htmlFor="exampleInputEmail1">
+                    Email address
+                  </label>
                   <input
                     type="email"
                     ref={emailRef}
@@ -72,7 +78,9 @@ const Signup = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="exampleInputPassword1">Password</label>
+                  <label htmlFor="exampleInputPassword1">
+                    Password
+                  </label>
                   <input
                     type="password"
                     ref={passwordRef}

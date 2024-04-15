@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Loader></Loader>
+      <Loader />
       <div className="hero w-100 py-4">
         <div className="container h-100">
           <div className="row h-100 align-items-center">

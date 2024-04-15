@@ -1,8 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/cartContext/cartContext";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const Cart = () => {
   const {
@@ -18,13 +19,27 @@ const Cart = () => {
       .toFixed(2)
   );
 
+  const [cartCleared, setCartCleared] = useState(false);
+
+  if (cartCleared) {
+    cart.splice(0, cart.length);
+  }
+
   const handlePay = () => {
-    alert("Pay Successfully");
+    toast.success("Pay Successfully!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+    });
+    setCartCleared(true);
+    cart.price = 0;
   };
 
   return (
     <Fragment>
       <Loader />
+      <ToastContainer />
       <div className="container-fluid p-0">
         <section className="container mb-5">
           <div className="cart">

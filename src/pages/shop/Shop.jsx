@@ -1,6 +1,13 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, {
+  Fragment,
+  useEffect,
+  useState,
+} from "react";
 import { CATEGORIES } from "../../constants/categories.constant";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import {
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { PRODUCTS } from "../../../public/data/data";
 import Loader from "../../components/Loader/Loader";
 
@@ -10,7 +17,9 @@ const Shop = () => {
   const [openAccordion, setOpenAccordion] = useState(1);
   const [sort, setSort] = useState(null);
   const [filter, setFilter] = useState([]);
-  const [products, setProducts] = useState(INITIAL_PRODUCTS);
+  const [products, setProducts] = useState(
+    INITIAL_PRODUCTS
+  );
   const [searchString, setSearchString] = useState("");
   const [indexLoadMore, setIndexLoadMore] = useState(1);
   const [limitProducts, setLimitProducts] = useState(
@@ -40,7 +49,9 @@ const Shop = () => {
 
   const handleAccordionClick = (accordionNumber) => {
     setOpenAccordion(
-      accordionNumber === openAccordion ? null : accordionNumber
+      accordionNumber === openAccordion
+        ? null
+        : accordionNumber
     );
   };
 
@@ -54,7 +65,10 @@ const Shop = () => {
           setSearchParams((searchParams) => {
             const prevParams = {};
             searchParams.forEach((value, key) => {
-              prevParams[key] = key === "search" ? value : newFilter.join(",");
+              prevParams[key] =
+                key === "search"
+                  ? value
+                  : newFilter.join(",");
             });
             return { ...prevParams };
           });
@@ -72,10 +86,16 @@ const Shop = () => {
         setSearchParams((searchParams) => {
           const prevParams = {};
           searchParams.forEach((value, key) => {
-            prevParams[key] = key === "search" ? value : newFilter.join(",");
+            prevParams[key] =
+              key === "search"
+                ? value
+                : newFilter.join(",");
           });
           if (newFilter.length === 1) {
-            return { ...prevParams, category: newFilter.join(",") };
+            return {
+              ...prevParams,
+              category: newFilter.join(","),
+            };
           }
           return { ...prevParams };
         });
@@ -87,25 +107,34 @@ const Shop = () => {
   const handleApplyFilter = () => {
     let productsApplyFilter = INITIAL_PRODUCTS;
     if (searchString !== "") {
-      productsApplyFilter = INITIAL_PRODUCTS.filter((product) =>
-        product.name.toLowerCase().includes(searchString.toLowerCase())
+      productsApplyFilter = INITIAL_PRODUCTS.filter(
+        (product) =>
+          product.name
+            .toLowerCase()
+            .includes(searchString.toLowerCase())
       );
     }
-    productsApplyFilter = productsApplyFilter.filter((product) => {
-      if (filter.length === 0) {
-        return true;
-      } else {
-        if (filter.includes(product.categories)) {
+    productsApplyFilter = productsApplyFilter.filter(
+      (product) => {
+        if (filter.length === 0) {
           return true;
+        } else {
+          if (filter.includes(product.categories)) {
+            return true;
+          }
+          return false;
         }
-        return false;
       }
-    });
+    );
     if (sort !== null) {
-      productsApplyFilter = sortProducts(productsApplyFilter);
+      productsApplyFilter = sortProducts(
+        productsApplyFilter
+      );
     }
     setProducts(productsApplyFilter);
-    setLimitProducts(productsApplyFilter.slice(0, 6 * indexLoadMore));
+    setLimitProducts(
+      productsApplyFilter.slice(0, 6 * indexLoadMore)
+    );
   };
 
   const handleSortCheapest = () => {
@@ -122,16 +151,20 @@ const Shop = () => {
 
   const sortProducts = (listProducts) => {
     if (sort === "Cheapest") {
-      listProducts = listProducts.sort((a, b) => a.price - b.price);
+      listProducts = listProducts.sort(
+        (a, b) => a.price - b.price
+      );
     } else {
-      listProducts = listProducts.sort((a, b) => b.price - a.price);
+      listProducts = listProducts.sort(
+        (a, b) => b.price - a.price
+      );
     }
     return listProducts;
   };
 
   return (
     <Fragment>
-      <Loader></Loader>
+      <Loader />
       <div className="shop-bg-filter w-100 position-fixed top-0" />
       <section className="container mb-5">
         <hr />
@@ -151,18 +184,35 @@ const Shop = () => {
                   </div>
                 </div>
                 <div className="category my-3 py-2 border-bottom">
-                  <div className="accordion" id="accordionExample">
+                  <div
+                    className="accordion"
+                    id="accordionExample"
+                  >
                     {CATEGORIES.map((category) => (
-                      <div className="accordion-item" key={category.id}>
-                        <h2 className="accordion-header" id="headingTwo">
+                      <div
+                        className="accordion-item"
+                        key={category.id}
+                      >
+                        <h2
+                          className="accordion-header"
+                          id="headingTwo"
+                        >
                           <button
                             className={`accordion-button ${
-                              openAccordion === category.id ? "" : "collapsed"
+                              openAccordion === category.id
+                                ? ""
+                                : "collapsed"
                             }`}
                             type="button"
-                            onClick={() => handleAccordionClick(category.id)}
+                            onClick={() =>
+                              handleAccordionClick(
+                                category.id
+                              )
+                            }
                             aria-expanded={
-                              openAccordion === category.id ? "true" : "false"
+                              openAccordion === category.id
+                                ? "true"
+                                : "false"
                             }
                           >
                             {category.name}
@@ -171,28 +221,41 @@ const Shop = () => {
                         <div
                           id="collapseTwo"
                           className={`accordion-collapse collapse ${
-                            openAccordion === category.id ? "show" : ""
+                            openAccordion === category.id
+                              ? "show"
+                              : ""
                           }`}
                           aria-labelledby="headingTwo"
                         >
                           <div className="accordion-body">
-                            {category.children.map((child) => (
-                              <div className="form-check" key={child.id}>
-                                <input
-                                  className="form-check-input pointer-cursor"
-                                  type="checkbox"
-                                  id={child.id}
-                                  checked={filter.includes(child.id)}
-                                  onClick={() => handleCollectFilter(child.id)}
-                                />
-                                <label
-                                  className="form-check-label ml-3"
-                                  htmlFor={child.id}
+                            {category.children.map(
+                              (child) => (
+                                <div
+                                  className="form-check"
+                                  key={child.id}
                                 >
-                                  {child.name}
-                                </label>
-                              </div>
-                            ))}
+                                  <input
+                                    className="form-check-input pointer-cursor"
+                                    type="checkbox"
+                                    id={child.id}
+                                    checked={filter.includes(
+                                      child.id
+                                    )}
+                                    onClick={() =>
+                                      handleCollectFilter(
+                                        child.id
+                                      )
+                                    }
+                                  />
+                                  <label
+                                    className="form-check-label ml-3"
+                                    htmlFor={child.id}
+                                  >
+                                    {child.name}
+                                  </label>
+                                </div>
+                              )
+                            )}
                           </div>
                         </div>
                       </div>
@@ -246,9 +309,12 @@ const Shop = () => {
                       className="col-6 col-md-4 py-1 px-2 my-4 position-relative "
                       key={product.id}
                       onClick={() =>
-                        navigate(`/product-details/${product.id}`, {
-                          state: product,
-                        })
+                        navigate(
+                          `/product-details/${product.id}`,
+                          {
+                            state: product,
+                          }
+                        )
                       }
                     >
                       <div className="shop-item h-100 pointer-cursor">
@@ -260,7 +326,9 @@ const Shop = () => {
                               alt="product"
                               className="w-100 h-100 rounded-4 object-fit-cover"
                             />
-                            <h6 className="mt-3">{product.name}</h6>
+                            <h6 className="mt-3">
+                              {product.name}
+                            </h6>
                             <div className="d-flex px-1 position-absolute bottom-0">
                               <div
                                 className="mx-1 fw-bold"
@@ -272,14 +340,17 @@ const Shop = () => {
                                 <strike>
                                   {Math.round(
                                     product.price /
-                                      (1 - product.percentSalesOff)
+                                      (1 -
+                                        product.percentSalesOff)
                                   ) + "$"}
                                 </strike>
                               </div>
                               <div className="mx-1">
                                 <span className="bg-danger-subtle rounded-pill px-2 py-1">
-                                  {Math.round(product.percentSalesOff * 100) +
-                                    "%"}
+                                  {Math.round(
+                                    product.percentSalesOff *
+                                      100
+                                  ) + "%"}
                                 </span>
                               </div>
                             </div>
@@ -290,10 +361,14 @@ const Shop = () => {
                   ))}
                 </div>
               </div>
-              {indexLoadMore < Math.round(products.length / 6) && (
+              {indexLoadMore <
+                Math.round(products.length / 6) && (
                 <div className="w-100 text-center my-5">
                   <div className="row justify-content-center">
-                    <div className="col-12 col-lg-3" onClick={handleShowMore}>
+                    <div
+                      className="col-12 col-lg-3"
+                      onClick={handleShowMore}
+                    >
                       <a className="btn py-2 px-4 rounded-pill border border-1 w-100">
                         Show more
                       </a>

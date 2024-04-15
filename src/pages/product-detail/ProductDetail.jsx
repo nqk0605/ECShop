@@ -59,7 +59,7 @@ const ProductDetail = () => {
 
   return (
     <Fragment>
-      <Loader></Loader>
+      <Loader />
       <ToastContainer />
       <div className="container-fluid p-0">
         <section className="container mb-5">

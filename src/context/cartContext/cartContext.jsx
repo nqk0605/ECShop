@@ -1,5 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+} from "react";
 
 // Create a context for the shopping cart
 const CartContext = createContext();
@@ -28,18 +32,30 @@ export const CartProvider = ({ children }) => {
           if (prod.id === isExistedProductId) {
             localStorage.setItem(
               "cart",
-              JSON.stringify({ ...prod, quantity: prod.quantity + 1 })
+              JSON.stringify({
+                ...prod,
+                quantity: prod.quantity + 1,
+              })
             );
             return { ...prod, quantity: prod.quantity + 1 };
           } else {
-            localStorage.setItem("cart", JSON.stringify(prod));
+            localStorage.setItem(
+              "cart",
+              JSON.stringify(prod)
+            );
             return prod;
           }
         });
-        localStorage.setItem("cart", JSON.stringify(newCart));
+        localStorage.setItem(
+          "cart",
+          JSON.stringify(newCart)
+        );
         return newCart;
       } else {
-        localStorage.setItem("cart", JSON.stringify([...prev, product]));
+        localStorage.setItem(
+          "cart",
+          JSON.stringify([...prev, product])
+        );
         return [...prev, product];
       }
     });
@@ -68,13 +84,18 @@ export const CartProvider = ({ children }) => {
       const updateWithoutZeroQuantity = newCart.filter(
         (prod) => prod.quantity > 0
       );
-      localStorage.setItem("cart", JSON.stringify(updateWithoutZeroQuantity));
+      localStorage.setItem(
+        "cart",
+        JSON.stringify(updateWithoutZeroQuantity)
+      );
       return updateWithoutZeroQuantity;
     });
   };
 
   const deleteProduct = (productId) => {
-    setCart((prev) => prev.filter((prod) => prod.id !== productId));
+    setCart((prev) =>
+      prev.filter((prod) => prod.id !== productId)
+    );
   };
 
   return (
