@@ -2,6 +2,7 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { checkEmail } from "../../utils/validateForm";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -12,9 +13,7 @@ const Footer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const emailPattern =
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;
-    if (email.trim() !== "" && emailPattern.test(email)) {
+    if (email.trim() !== "" && checkEmail(email)) {
       toast.success("Thank you for visiting our store!", {
         position: "top-right",
         autoClose: 5000,
