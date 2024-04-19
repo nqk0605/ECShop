@@ -6,6 +6,7 @@ const About = () => {
   return (
     <Fragment>
       <Loader />
+      <img src="./images/sitemap.png" alt="sitemap" />
     </Fragment>
   );
 };
