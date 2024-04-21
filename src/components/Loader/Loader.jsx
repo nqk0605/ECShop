@@ -14,6 +14,7 @@ const Loader = () => {
       setLoaderClass((prev) => prev + " preloader-hide");
       setTimeout(() => {
         setLoaderClass((prev) => prev + " d-none");
+        window.scrollTo(0, 0); // Cuộn lên đầu trang khi load xong
       }, 500);
     }, 1000);
   };
