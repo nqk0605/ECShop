@@ -383,42 +383,6 @@ footer {
   transition: none;
 }
 
-@media (max-width: 768px) {
-  .hero-main-img {
-    background-size: 100% !important;
-    background-position-y: -68% !important;
-  }
-}
-@media (max-width: 992px) {
-  .filter-menu-container {
-    display: block !important;
-    height: 89vh;
-    position: absolute;
-    bottom: -100%;
-    box-shadow: var(--box-shadow-main);
-    right: 0;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    z-index: 999;
-    visibility: hidden;
-  }
-  .filter-menu-container-active {
-    bottom: 10px;
-    visibility: visible;
-  }
-}
-
-@keyframes changeImageAnimation {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 100;
-  }
-}
-
 @keyframes deleteCartAnimation {
   0% {
     left: 0%;
