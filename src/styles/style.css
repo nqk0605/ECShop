@@ -1,8 +1,7 @@
 :root {
   --main-color: #0b0909;
+  --first-color: #ffffff;
   --secondary-color: #f0f0f0;
-  --box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important;
-  --box-shadow-main: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 ::-webkit-scrollbar {
   width: 15px;
@@ -162,10 +161,10 @@ input[type="search"] {
 }
 .product-container:hover,
 .member-container:hover {
-  box-shadow: var(--box-shadow-lg);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .btn:hover {
-  box-shadow: var(--box-shadow-lg);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .browse-container {
   background-color: var(--secondary-color);
@@ -181,7 +180,7 @@ i[class*="bi-arrow"] {
   transition: 0.5s all ease;
 }
 .browse-clothes:hover {
-  box-shadow: var(--box-shadow-main);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important;
   transition: 0.5s all ease;
 }
 .shirt {
@@ -208,7 +207,7 @@ i[class*="bi-arrow"] {
   transition: 0.2s all ease !important;
 }
 .social-icon:hover {
-  color: #ffffff !important;
+  color: var(--first-color) !important;
   background-color: var(--main-color) !important;
   transition: 0.2s all ease !important;
 }
@@ -218,7 +217,7 @@ footer {
 .newsletter {
   background: linear-gradient(
     to bottom,
-    #ffffff 50%,
+    var(--first-color) 50%,
     var(--secondary-color) 50%
   );
 }
@@ -227,7 +226,7 @@ footer {
 }
 .footer-links > ul > li > a:hover {
   color: var(--main-color) !important;
-  text-shadow: 0 0 10px var(--box-shadow-lg);
+  text-shadow: 0 0 10px 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .close-menu {
   background-color: var(--main-color) !important;
@@ -252,7 +251,7 @@ footer {
   outline: none;
 }
 .main-input:focus {
-  box-shadow: var(--box-shadow-main);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important;
 }
 .coupon-input {
   background-color: var(--secondary-color);
@@ -386,7 +385,7 @@ footer {
 @keyframes deleteCartAnimation {
   0% {
     left: 0%;
-    background-color: #ffffff;
+    background-color: var(--first-color);
   }
   50% {
     left: 0%;
