@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, {
   Fragment,
   useEffect,
@@ -10,6 +12,7 @@ import {
 } from "react-router-dom";
 import { PRODUCTS } from "../../../public/data/data";
 import Loader from "../../components/Loader/Loader";
+import { Helmet } from "react-helmet";
 
 const INITIAL_PRODUCTS = PRODUCTS;
 
@@ -165,6 +168,9 @@ const Shop = () => {
   return (
     <Fragment>
       <Loader />
+      <Helmet>
+        <title>Shop - MenWear</title>
+      </Helmet>
       <div className="shop-bg-filter w-100 position-fixed top-0" />
       <section className="container mb-5">
         <hr />

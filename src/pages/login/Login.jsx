@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { Fragment, useRef } from "react";
@@ -10,6 +11,7 @@ import {
   checkEmail,
   checkLongPassword,
 } from "../../utils/validateForm";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -59,6 +61,9 @@ const Login = () => {
     <Fragment>
       <Loader />
       <ToastContainer />
+      <Helmet>
+        <title>Login - MenWear</title>
+      </Helmet>
       <section className="container mb-5">
         <div className="container-fluid p-0">
           <div className="login-container">

@@ -4,6 +4,7 @@ import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/cartContext/cartContext";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Cart = () => {
   const {
@@ -34,6 +35,9 @@ const Cart = () => {
     <Fragment>
       <Loader />
       <ToastContainer />
+      <Helmet>
+        <title>Cart - MenWear</title>
+      </Helmet>
       <div className="container-fluid p-0">
         <section className="container mb-5">
           <div className="cart">

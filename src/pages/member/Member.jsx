@@ -3,11 +3,15 @@ import React, { Fragment } from "react";
 import Loader from "../../components/Loader/Loader";
 import { MEMBER } from "../../constants/member.constant.js";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Member = () => {
   return (
     <Fragment>
       <Loader></Loader>
+      <Helmet>
+        <title>Member - MenWear</title>
+      </Helmet>
       <section className="container my-5">
         <div className="w-100 text-center my-4">
           <h1 className="fw-bolder">MEMBERS</h1>

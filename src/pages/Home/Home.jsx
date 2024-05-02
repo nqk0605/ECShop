@@ -5,6 +5,7 @@ import { BRANDS_BANNER } from "../../constants/common.constant";
 import { TOP_ITEMS } from "../../constants/common.constant";
 import Loader from "../../components/Loader/Loader";
 import { PRODUCTS } from "../../../public/data/data";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,6 +13,9 @@ const Home = () => {
   return (
     <Fragment>
       <Loader />
+      <Helmet>
+        <title>MenWear</title>
+      </Helmet>
       <div className="hero w-100 py-4">
         <div className="container h-100">
           <div className="row h-100 align-items-center">
