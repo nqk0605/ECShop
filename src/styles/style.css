@@ -322,30 +322,6 @@ footer {
   opacity: 1 !important;
   transform: translateX(12px);
 }
-.noUi-handle {
-  border-radius: 50% !important;
-  width: 28px !important;
-  top: -10px !important;
-  background-color: var(--main-color) !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-.noUi-horizontal .noUi-tooltip {
-  bottom: auto !important;
-}
-.noUi-tooltip {
-  border: none !important;
-}
-.noUi-connect {
-  background-color: var(--main-color) !important;
-}
-.noUi-horizontal {
-  height: 10px !important;
-}
-.noUi-handle::before,
-.noUi-handle::after {
-  display: none !important;
-}
 .product-image {
   transform: scale(1.1);
 }
