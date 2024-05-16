@@ -169,13 +169,8 @@ input[type="search"] {
 .browse-container {
   background-color: var(--secondary-color);
 }
-i[class*="bi-arrow"] {
-  display: inline-block;
-  transform: rotateY(-180deg);
-}
 .browse-clothes {
-  height: 30vh;
-
+  height: 40vh;
   background-size: cover;
   transition: 0.5s all ease;
 }
@@ -184,18 +179,20 @@ i[class*="bi-arrow"] {
   transition: 0.5s all ease;
 }
 .shirt {
-  background-image: url("/public/images/background/shirt.webp");
+  background-image: url("/public/images/background/shirt.jpg");
+  background-position-y: 5%;
 }
 .t-shirt {
   background-image: url("/public/images/background/t-shirt.jpg");
-  background-position-y: 40%;
+  background-position-y: 10%;
 }
 .polo {
   background-image: url("/public/images/background/polo.jpg");
-  background-position-y: 98%;
+  background-position-y: 25%;
 }
 .sport {
-  background-image: url("/public/images/background/sport.webp");
+  background-image: url("/public/images/background/sport.jpg");
+  background-position-y: 25%;
 }
 .user-comment {
   height: 100%;

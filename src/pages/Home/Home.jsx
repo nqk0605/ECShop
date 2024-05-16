@@ -157,7 +157,7 @@ const Home = () => {
               className="text-decoration-none"
               onClick={() => navigate(`shop?category=5`)}
             >
-              <div className="browse-clothes shirt p-2 px-4 rounded-3 text-white">
+              <div className="browse-clothes shirt p-2 px-4 rounded-3 text-dark">
                 <h1>Shirt</h1>
               </div>
             </a>
@@ -167,7 +167,7 @@ const Home = () => {
               className="text-decoration-none"
               onClick={() => navigate(`shop?category=2`)}
             >
-              <div className="browse-clothes t-shirt p-2 px-4 rounded-3 text-white">
+              <div className="browse-clothes t-shirt p-2 px-4 rounded-3 text-dark">
                 <h1>T - Shirt</h1>
               </div>
             </a>
