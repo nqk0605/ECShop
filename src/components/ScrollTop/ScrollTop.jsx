@@ -29,7 +29,7 @@ const ScrollTop = () => {
   return (
     <button
       type="button"
-      className={`btn btn-danger btn-lg btn-top ${
+      className={`btn btn-white btn-lg btn-top ${
         isVisible ? "show" : ""
       }`}
       onClick={scrollToTop}
