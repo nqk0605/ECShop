@@ -10,7 +10,7 @@ const About = () => {
       <Helmet>
         <title>About - MenWear</title>
       </Helmet>
-      <img src="./images/sitemap.png" alt="sitemap" />
+      <img src="./images/sitemap.jpg" alt="sitemap" />
     </Fragment>
   );
 };
