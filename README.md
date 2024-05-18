@@ -8,6 +8,6 @@ Các framework được sử dụng chủ yếu:
 - [CSS3](https://www.w3schools.com/css/)
 - [Vite](https://vitejs.dev/)
 - [Vercel](https://vercel.com/)
-- [FiraBase](https://firebase.google.com/)
+- [FireBase](https://firebase.google.com/)
 
 Source : [ECShop](https://github.com/nqk0605/ECShop.git)
