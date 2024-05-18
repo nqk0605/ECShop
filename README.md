@@ -1,6 +1,6 @@
 # Project EC - Shop MenWear
 
-Các framework được sử dụng chủ yếu:
+Các công nghệ được sử dụng chủ yếu:
 
 - [ReactJS](https://react.dev/)
 - [Bootstrap5](https://getbootstrap.com/)
