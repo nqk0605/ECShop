@@ -2,7 +2,7 @@
 
 [MenWear](https://menwear-shop.vercel.app/) is an online store specializing in men's fashion, offering trendy and modern styles with high-quality products. With the aim of providing customers with the best shopping experience, [MenWear](https://menwear-shop.vercel.app/) not only offers contemporary and stylish men's fashion items but also focuses on creating a user-friendly and innovative website interface. The modern features and unique design of the website enhance the overall shopping experience, making it truly exceptional.
 
-![](public\images\page.png)
+<img src="/public/images/page.png" alt="page"/>
 
 ## Prerequisites
 
