@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-// import firebase from "firebase/app";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import Loader from "../../components/Loader/Loader";
 import { auth } from "../../config/firebaseConfig";
+import { useAuth } from "../../context/authContext/authContext";
 import {
   checkEmail,
   checkLongPassword,
@@ -14,8 +15,15 @@ import { Helmet } from "react-helmet";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const { googleLogin, account } = useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
+
+  useEffect(() => {
+    if (account) {
+      navigate("/");
+    }
+  }, [account]);
 
   const handleSignUp = async (event) => {
     event.preventDefault();
@@ -35,7 +43,6 @@ const Signup = () => {
               passwordRef.current.value
             );
           console.log(response);
-          navigate("/login");
         } catch (error) {
           toast.error("Create account failed!", {
             position: "top-right",
@@ -45,7 +52,7 @@ const Signup = () => {
           });
         }
       } else {
-        toast.error("Please fullfil correct value!", {
+        toast.error("Please fulfill correct value!", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -60,7 +67,7 @@ const Signup = () => {
       <Loader />
       <ToastContainer />
       <Helmet>
-        <title>Sign Up - MenWear</title>
+        <title>Signup - MenWear</title>
       </Helmet>
       <section className="container mb-5">
         <div className="container-fluid p-0">
@@ -99,9 +106,16 @@ const Signup = () => {
                   onClick={handleSignUp}
                   className="btn btn-primary"
                 >
-                  Submit
+                  Register
                 </button>
               </form>
+              <span className="mt-3">Or Login with:</span>
+              <button
+                onClick={googleLogin}
+                className="btn btn-dark mt-3"
+              >
+                <i className="bi bi-google"></i>
+              </button>
               <div className="login">
                 <span>Already Have An Account?</span>
                 <span

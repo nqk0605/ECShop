@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import { auth } from "../../config/firebaseConfig";
@@ -15,9 +15,15 @@ import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login, googleLogin, account } = useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
+
+  useEffect(() => {
+    if (account) {
+      navigate("/");
+    }
+  }, [account]);
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -47,7 +53,7 @@ const Login = () => {
           });
         }
       } else {
-        toast.error("Please fullfil correct value!", {
+        toast.error("Please fulfill correct value!", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -100,9 +106,16 @@ const Login = () => {
                   onClick={handleLogin}
                   className="btn btn-primary"
                 >
-                  Submit
+                  Login
                 </button>
               </form>
+              <span className="mt-3">Or Login with:</span>
+              <button
+                onClick={googleLogin}
+                className="btn btn-dark mt-3"
+              >
+                <i className="bi bi-google"></i>
+              </button>
               <div className="sign-up">
                 <span>Don’t Have An Account?</span>
                 <span
