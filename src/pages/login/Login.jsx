@@ -15,7 +15,8 @@ import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login, googleLogin, account } = useAuth();
+  const { login, googleLogin, facebookLogin, account } =
+    useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -110,12 +111,20 @@ const Login = () => {
                 </button>
               </form>
               <span className="mt-3">Or Login with:</span>
-              <button
-                onClick={googleLogin}
-                className="btn btn-dark mt-3"
-              >
-                <i className="bi bi-google"></i>
-              </button>
+              <div className="d-inline-block">
+                <button
+                  onClick={googleLogin}
+                  className="btn btn-dark mt-3 mx-3"
+                >
+                  <i className="bi bi-google"></i>
+                </button>
+                <button
+                  onClick={facebookLogin}
+                  className="btn btn-dark mt-3 mx-3"
+                >
+                  <i className="bi bi-facebook"></i>
+                </button>
+              </div>
               <div className="sign-up">
                 <span>Don’t Have An Account?</span>
                 <span
