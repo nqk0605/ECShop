@@ -26,8 +26,8 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        setAccount(user.email);
-        localStorage.setItem("account", user.email);
+        setAccount(user.displayName);
+        localStorage.setItem("account", user.displayName);
       } else {
         setAccount("");
         localStorage.removeItem("account");

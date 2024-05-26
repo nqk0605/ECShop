@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   const handleNavigateCart = () => {
-    if (account.trim().length > 0) {
+    if (account?.trim().length > 0) {
       navigate("/cart");
     } else {
       navigate("/login");
@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      {isNoticeVisible && !account && (
+      {isNoticeVisible && !account?.trim() && (
         <div className="header-notice w-100 d-flex py-2 fs-6 position-relative">
           <div className="text-center flex-grow-1">
             Sign up and get up to 30% off.
@@ -125,7 +125,7 @@ const Header = () => {
             >
               <i className="bi bi-cart" />
             </button>
-            {account.trim().length > 0 ? (
+            {account?.trim().length > 0 ? (
               <div className="user-profile mx-2 d-flex align-items-center">
                 <span className="me-2">{account}</span>
                 <button
