@@ -125,7 +125,7 @@ const Header = () => {
             >
               <i className="bi bi-cart" />
             </button>
-            {account?.trim().length > 0 ? (
+            {account && account.trim().length > 0 ? (
               <div className="user-profile mx-2 d-flex align-items-center">
                 <span className="me-2">{account}</span>
                 <button

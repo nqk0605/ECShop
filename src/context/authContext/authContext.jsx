@@ -10,7 +10,6 @@ import {
 import {
   auth,
   googleProvider,
-  facebookProvider,
 } from "../../config/firebaseConfig";
 import { signInWithPopup, signOut } from "firebase/auth";
 
@@ -26,8 +25,8 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        setAccount(user.displayName);
-        localStorage.setItem("account", user.displayName);
+        setAccount(user.email);
+        localStorage.setItem("account", user.email);
       } else {
         setAccount("");
         localStorage.removeItem("account");
@@ -47,27 +46,8 @@ export const AuthProvider = ({ children }) => {
         auth,
         googleProvider
       );
-      setAccount(result.user.displayName);
-      localStorage.setItem(
-        "account",
-        result.user.displayName
-      );
-    } catch (error) {
-      console.error("Google login failed:", error);
-    }
-  };
-
-  const facebookLogin = async () => {
-    try {
-      const result = await signInWithPopup(
-        auth,
-        facebookProvider
-      );
-      setAccount(result.user.displayName);
-      localStorage.setItem(
-        "account",
-        result.user.displayName
-      );
+      setAccount(result.user.email);
+      localStorage.setItem("account", result.user.email);
     } catch (error) {
       console.error("Google login failed:", error);
     }
@@ -86,7 +66,6 @@ export const AuthProvider = ({ children }) => {
         account,
         login,
         googleLogin,
-        facebookLogin,
         logout,
       }}
     >
