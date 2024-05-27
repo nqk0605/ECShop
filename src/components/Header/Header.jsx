@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
 import React, { Fragment, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HEADER_ITEMS } from "../../constants/common.constant";
@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   const handleNavigateCart = () => {
-    if (account?.trim().length > 0) {
+    if (account?.email) {
       navigate("/cart");
     } else {
       navigate("/login");
@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      {isNoticeVisible && !account?.trim() && (
+      {isNoticeVisible && !account?.email && (
         <div className="header-notice w-100 d-flex py-2 fs-6 position-relative">
           <div className="text-center flex-grow-1">
             Sign up and get up to 30% off.
@@ -55,7 +55,7 @@ const Header = () => {
             className="px-2 text-white pointer-cursor signup-dismiss"
             onClick={closeNotice}
           >
-            <span className>
+            <span>
               <i className="bi bi-x-lg" />
             </span>
           </div>
@@ -125,9 +125,11 @@ const Header = () => {
             >
               <i className="bi bi-cart" />
             </button>
-            {account && account.trim().length > 0 ? (
+            {account ? (
               <div className="user-profile mx-2 d-flex align-items-center">
-                <span className="me-2">{account}</span>
+                <span className="me-2">
+                  {account.displayName || account.email}
+                </span>
                 <button
                   className="mx-2 fw-bolder text-decoration-none text-black fs-5"
                   onClick={handleLogout}

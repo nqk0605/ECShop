@@ -15,7 +15,8 @@ import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login, googleLogin, account } = useAuth();
+  const { login, googleLogin, facebookLogin, account } =
+    useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -116,6 +117,12 @@ const Login = () => {
                   className="btn btn-dark mt-3 mx-3"
                 >
                   <i className="bi bi-google"></i>
+                </button>
+                <button
+                  onClick={facebookLogin}
+                  className="btn btn-dark mt-3 mx-3"
+                >
+                  <i className="bi bi-facebook"></i>
                 </button>
               </div>
               <div className="sign-up">
