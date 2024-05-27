@@ -43,11 +43,6 @@ export const AuthProvider = ({ children }) => {
     return unsubscribe;
   }, []);
 
-  const login = (user) => {
-    setAccount(user);
-    localStorage.setItem("account", JSON.stringify(user));
-  };
-
   const googleLogin = async () => {
     try {
       const result = await signInWithPopup(
@@ -99,7 +94,6 @@ export const AuthProvider = ({ children }) => {
     <AuthContext.Provider
       value={{
         account,
-        login,
         googleLogin,
         facebookLogin,
         logout,

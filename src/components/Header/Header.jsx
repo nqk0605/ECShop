@@ -1,5 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { Fragment, useRef, useState } from "react";
+import React, {
+  Fragment,
+  useRef,
+  useState,
+  useEffect,
+} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HEADER_ITEMS } from "../../constants/common.constant";
 import { useAuth } from "../../context/authContext/authContext";
@@ -14,6 +19,12 @@ const Header = () => {
   const closeNotice = () => {
     setIsNoticeVisible(false);
   };
+
+  useEffect(() => {
+    if (account) {
+      closeNotice();
+    }
+  }, [account]);
 
   const handlePressEnter = (event) => {
     if (event.key === "Enter") {
