@@ -44,7 +44,6 @@ const Login = () => {
           );
           console.log(response);
           login(response.user.email);
-          navigate("/");
         } catch (error) {
           toast.error("Login failed!", {
             position: "top-right",
