@@ -12,6 +12,8 @@ import {
   checkLongPassword,
 } from "../../utils/validateForm";
 import { Helmet } from "react-helmet";
+import ModelViewer from "../../components/Model/ModelViewer";
+import Model2 from "../../components/Model/Model2";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -72,7 +74,9 @@ const Signup = () => {
       <section className="container mb-5">
         <div className="container-fluid p-0">
           <div className="signup-container">
-            <section className="signup-background" />
+            <section className="signup-background">
+              <ModelViewer ModelComponent={Model2} />
+            </section>
             <section className="signup-form">
               <h2 className="form-title">Sign Up</h2>
               <form className="form-element">

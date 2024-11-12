@@ -12,10 +12,14 @@
 }
 
 .signup-container .signup-background {
-  width: 50%;
-  padding: 40px;
-  background-image: url("/public/images/background/sign-up.jpg");
-  background-size: cover;
+  /*width: 50%;*/
+  /*padding: 40px;*/
+  /*background-image: url("/public/images/background/sign-up.jpg");*/
+  /*background-size: cover;*/
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .signup-form .form-title {
