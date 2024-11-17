@@ -12,8 +12,6 @@ import {
   checkLongPassword,
 } from "../../utils/validateForm";
 import { Helmet } from "react-helmet";
-import ModelViewer from "../../components/Model/ModelViewer";
-import Model1 from "../../components/Model/Model1";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -83,12 +81,12 @@ const Login = () => {
                     Email address
                   </label>
                   <input
-                      type="email"
-                      ref={emailRef}
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                      placeholder="Enter email"
+                    type="email"
+                    ref={emailRef}
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
                   />
                 </div>
                 <div className="form-group">
@@ -96,17 +94,17 @@ const Login = () => {
                     Password
                   </label>
                   <input
-                      type="password"
-                      ref={passwordRef}
-                      className="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Password"
+                    type="password"
+                    ref={passwordRef}
+                    className="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Password"
                   />
                 </div>
                 <button
-                    type="submit"
-                    onClick={handleLogin}
-                    className="btn btn-primary"
+                  type="submit"
+                  onClick={handleLogin}
+                  className="btn btn-primary"
                 >
                   Login
                 </button>
@@ -114,14 +112,14 @@ const Login = () => {
               <span className="mt-3">Or Login with:</span>
               <div className="d-inline-block">
                 <button
-                    onClick={googleLogin}
-                    className="btn btn-dark mt-3 mx-3"
+                  onClick={googleLogin}
+                  className="btn btn-dark mt-3 mx-3"
                 >
                   <i className="bi bi-google"></i>
                 </button>
                 <button
-                    onClick={facebookLogin}
-                    className="btn btn-dark mt-3 mx-3"
+                  onClick={facebookLogin}
+                  className="btn btn-dark mt-3 mx-3"
                 >
                   <i className="bi bi-facebook"></i>
                 </button>
@@ -129,16 +127,14 @@ const Login = () => {
               <div className="sign-up">
                 <span>Don’t Have An Account?</span>
                 <span
-                    className="sign-up_text text-primary pointer-cursor"
-                    onClick={() => navigate("/signup")}
+                  className="sign-up_text text-primary pointer-cursor"
+                  onClick={() => navigate("/signup")}
                 >
                   Sign Up
                 </span>
               </div>
             </section>
-            <section className="login-background">
-              <ModelViewer ModelComponent={Model1} />
-            </section>
+            <section className="login-background"></section>
           </div>
         </div>
       </section>
