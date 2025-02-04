@@ -10,8 +10,6 @@ import Login from "./pages/login/Login.jsx";
 import Signup from "./pages/signup/Signup.jsx";
 import Cart from "./pages/cart/Cart.jsx";
 import ProductDetail from "./pages/product-detail/ProductDetail.jsx";
-import About from "./pages/about/About.jsx";
-import Member from "./pages/member/Member.jsx";
 import Shop from "./pages/shop/Shop.jsx";
 import Home from "./pages/Home/Home.jsx";
 import "react-toastify/dist/ReactToastify.css";
@@ -33,14 +31,6 @@ const router = createBrowserRouter([
       {
         path: "/product-details/:id",
         element: <ProductDetail />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/member",
-        element: <Member />,
       },
       {
         path: "/shop",

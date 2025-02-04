@@ -24,8 +24,6 @@ export const BRANDS_BANNER = [
 export const HEADER_ITEMS = [
   { id: 1, name: "Home", url: "/" },
   { id: 2, name: "Shop", url: "/shop" },
-  { id: 3, name: "Member", url: "/member" },
-  { id: 4, name: "About", url: "/about" },
 ];
 
 export const TOP_ITEMS = [
