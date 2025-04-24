@@ -14,7 +14,7 @@ const Loader = () => {
       setLoaderClass((prev) => prev + " preloader-hide");
       setTimeout(() => {
         setLoaderClass((prev) => prev + " d-none");
-        window.scrollTo(0, 0); // Cuộn lên đầu trang khi load xong
+        window.scrollTo(0, 0); // Scroll to top when loading is complete
       }, 500);
     }, 1000);
   };

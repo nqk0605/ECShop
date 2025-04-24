@@ -8,16 +8,28 @@ import React, {
 import { Link, useNavigate } from "react-router-dom";
 import { HEADER_ITEMS } from "../../constants/common.constant";
 import { useAuth } from "../../context/authContext/authContext";
+import { useCart } from "../../context/cartContext/cartContext";
 
 const Header = () => {
   const navigate = useNavigate();
   const { account, logout } = useAuth();
+  const { cart } = useCart();
   const inputRef = useRef();
   const [isNoticeVisible, setIsNoticeVisible] =
     useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] =
+    useState(false);
 
   const closeNotice = () => {
     setIsNoticeVisible(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Toggle body scroll
+    document.body.style.overflow = !isMobileMenuOpen
+      ? "hidden"
+      : "";
   };
 
   useEffect(() => {
@@ -54,6 +66,66 @@ const Header = () => {
 
   return (
     <Fragment>
+      {/* Mobile Menu */}
+      <div
+        className={`mobile-menu-overlay ${
+          isMobileMenuOpen ? "active" : ""
+        }`}
+        onClick={toggleMobileMenu}
+      ></div>
+      <div
+        className={`mobile-menu ${
+          isMobileMenuOpen ? "active" : ""
+        }`}
+      >
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h5 className="mb-0">Menu</h5>
+          <button
+            className="btn fs-4"
+            onClick={toggleMobileMenu}
+          >
+            <i className="bi bi-x"></i>
+          </button>
+        </div>
+        <ul className="list-unstyled">
+          {HEADER_ITEMS.map((item) => (
+            <li key={item.id} className="mb-3">
+              <Link
+                to={item.url}
+                className="text-decoration-none text-dark fs-5"
+                onClick={toggleMobileMenu}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+          {account ? (
+            <li className="mb-3">
+              <button
+                className="btn text-dark p-0 fs-5"
+                onClick={() => {
+                  toggleMobileMenu();
+                  handleLogout();
+                }}
+              >
+                Logout
+              </button>
+            </li>
+          ) : (
+            <li className="mb-3">
+              <Link
+                to="/login"
+                className="text-decoration-none text-dark fs-5"
+                onClick={toggleMobileMenu}
+              >
+                Login
+              </Link>
+            </li>
+          )}
+        </ul>
+      </div>
+
+      {/* Notice Bar */}
       {isNoticeVisible && !account?.email && (
         <div className="header-notice w-100 d-flex py-2 fs-6 position-relative">
           <div className="text-center flex-grow-1">
@@ -72,10 +144,15 @@ const Header = () => {
           </div>
         </div>
       )}
+
+      {/* Main Header */}
       <header className="container main-header py-3">
         <div className="d-flex align-items-center">
           <div className="d-flex h-100 align-items-center">
-            <button className="btn mx-1 text-black fs-5 open-menu d-block d-md-none">
+            <button
+              className="btn mx-1 text-black fs-5 d-block d-md-none"
+              onClick={toggleMobileMenu}
+            >
               <i className="bi bi-list" />
             </button>
             <Link to="/">
@@ -132,9 +209,23 @@ const Header = () => {
           <div className="d-flex">
             <button
               onClick={handleNavigateCart}
-              className="mx-2 fw-bolder text-decoration-none text-black fs-5"
+              className="mx-2 fw-bolder text-decoration-none text-black fs-5 position-relative"
             >
               <i className="bi bi-cart" />
+              {cart.length > 0 && (
+                <span
+                  className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  style={{
+                    fontSize: "0.6rem",
+                    padding: "0.25em 0.4em",
+                  }}
+                >
+                  {cart.reduce(
+                    (total, item) => total + item.quantity,
+                    0
+                  )}
+                </span>
+              )}
             </button>
             {account ? (
               <div className="user-profile mx-2 d-flex align-items-center">

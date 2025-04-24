@@ -79,9 +79,13 @@ const Footer = () => {
                 </Link>
               </div>
               <p className="text-secondary mb-3">
-                We have clothes that will give you a new
-                style and you will be proud of yourself and
-                your purchase.
+                MenWear is a Brand of CEI TikInfluence LLC
+                <br />
+                CEI TikInfluence LLC
+                <br />
+                Address: 5900 Balcones Drive STE 100 Austin
+                <br />
+                TX: 78731
               </p>
               <div className="social d-flex mt-5">
                 <Link

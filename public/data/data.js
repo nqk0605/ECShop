@@ -3,9 +3,9 @@ import { v4 as uuidv4 } from "uuid";
 export const PRODUCTS = [
   {
     id: uuidv4(),
-    name: "Áo Thun Nam Chạy Bộ Graphic Jungle",
+    name: "Men's Graphic Jungle Running T-Shirt",
     description:
-      "Chất liệu 100% Polyester. Kiểu dệt Mini Square tăng độ bền, hạn chế sờn, xước vải.",
+      "Material: 100% Polyester. Mini Square weave enhances durability, reducing pilling and scratching.",
     image1: "/images/graphicjungle/24CMAW.AT015.22.jpg",
     image2: "/images/graphicjungle/24CMAW.AT015.25_86.webp",
     image3: "/images/graphicjungle/24CMAW.AT015.22.jpg",
@@ -16,9 +16,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Thun Nam Chạy Bộ Graphic Special",
+    name: "Men's Graphic Special Running T-Shirt",
     description:
-      "Chất liệu: 100% Polyester. Xử lý hoàn thiện vải: Quick-Dry + Wicking + Stretch. Công nghệ Chafe-Free hạn chế tối đa ma sát trong quá trình vận động từ các đường may tối giản hoá.",
+      "Material: 100% Polyester. Fabric finishing: Quick-Dry, Wicking, Stretch. Chafe-Free technology minimizes friction during movement with simplified seams.",
     image1:
       "/images/graphicspecial/GRAPHICS.AGANIN.10.webp",
     image2:
@@ -32,9 +32,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Thun Thể Thao Active Basics",
+    name: "Active Basics Sports T-Shirt",
     description:
-      "Chất liệu 100% Recycled Polyester. Vải dệt Knit - Interlock. Công nghệ Ex-Dry nhanh khô thoáng mát.",
+      "Material: 100% Recycled Polyester. Knit-Interlock weave. Ex-Dry technology for quick drying and breathability.",
     image1: "/images/activebasic/24CMAW.AT005.9.webp",
     image2: "/images/activebasic/24CMAW.AT005_copy-2.webp",
     image3: "/images/activebasic/24CMAW.AT005.11.jpg",
@@ -45,9 +45,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Thun Nam Chạy Bộ Graphic Tropical",
+    name: "Men's Graphic Tropical Running T-Shirt",
     description:
-      "Chất liệu 100% Polyester. Kiểu dệt Mini Square tăng độ bền, hạn chế sờn, xước vải. Các lỗ nhỏ trên vải giúp thoáng khí hơn.",
+      "Material: 100% Polyester. Mini Square weave enhances durability, reducing pilling and scratching. Small perforations in the fabric improve breathability.",
     image1:
       "/images/graphictropical/24CMAW.AT014.22_67.webp",
     image2: "/images/graphictropical/24CMAW.AT014.23.webp",
@@ -59,9 +59,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Thun Nam Chạy Bộ Graphic Heartbeat",
+    name: "Men's Graphic Heartbeat Running T-Shirt",
     description:
-      "Chất liệu 100% Polyester. Kiểu dệt Mini Square hạn chế Snagging sờn vải, tăng độ bền, ít bị rách hay thủng lỗ. Các lỗ nhỏ trên vải giúp thoáng khí hơn.",
+      "Material: 100% Polyester. Mini Square weave reduces snagging, enhances durability, and prevents tears or holes. Small perforations in the fabric improve breathability.",
     image1:
       "/images/graphicheartbeat/23CMAW.AT003.3_50.webp",
     image2:
@@ -75,9 +75,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Thun Nam Cotton 220GSM",
+    name: "Men's 220GSM Cotton T-Shirt",
     description:
-      "Chất liệu 100% Cotton. Định lượng vải 220gsm dày dặn. Vải được xử lí hoàn thiện giúp bề mặt vải ít xù lông, mềm mịn và bền màu hơn.",
+      "Material: 100% Cotton. 220gsm fabric weight for a sturdy feel. Fabric finishing reduces pilling, ensures softness, and enhances color durability.",
     image1: "/images/cotton220gsm/AT.220.TIM.1.webp",
     image2: "/images/cotton220gsm/AT.220.TIM.3.webp",
     image3: "/images/cotton220gsm/AT.220.TIM.4.webp",
@@ -88,9 +88,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Thun Nam chạy bộ Essential",
+    name: "Men's Essential Running T-Shirt",
     description:
-      "Chất liệu: 97% Poly + 3% Spandex. Xử lý hoàn thiện vải: Quick-Dry + Wicking + Stretch. Công nghệ Chafe-Free hạn chế tối đa ma sát trong quá trình vận động từ các đường may tối giản hoá.",
+      "Material: 97% Polyester + 3% Spandex. Fabric finishing: Quick-Dry, Wicking, Stretch. Chafe-Free technology minimizes friction during movement with simplified seams.",
     image1: "/images/essential/ATS.RN.EFM.26_92.webp",
     image2: "/images/essential/ATS.RN.EFM.27_25.webp",
     image3: "/images/essential/ATS.RN.EFM.22.jpg",
@@ -101,9 +101,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Thun Nam Thể Thao Promax-S1",
+    name: "Men's Promax-S1 Sports T-Shirt",
     description:
-      "Chất liệu: 100% Polyester. Xử lý hoàn thiện vải: Quick-Dry và Wicking. Dệt kiểu Mesh, thoáng khí.",
+      "Material: 100% Polyester. Fabric finishing: Quick-Dry and Wicking. Mesh weave for breathability.",
     image1: "/images/promaxs1/PROMAXS1AQUA2.webp",
     image2: "/images/promaxs1/PROMAXS1AQUA4.webp",
     image3: "/images/promaxs1/PROMAXS1AQUA1.webp",
@@ -114,9 +114,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo thun Cotton Trạm Phóng Tương Lai",
+    name: "Future Launch Cotton T-Shirt",
     description:
-      "Chất liệu: 95% Cotton Compact + 5% Spandex. Vải Cotton Compact mềm mại, thấm hút tốt.   Phù hợp với: mặc ở nhà, đi làm, đi chơi.",
+      "Material: 95% Compact Cotton + 5% Spandex. Compact Cotton is soft and highly absorbent. Suitable for: casual wear, work, or outings.",
     image1: "/images/cottonfuture/_CMM2498_36.webp",
     image2: "/images/cottonfuture/_CMM2496.webp",
     image3: "/images/cottonfuture/_CMM2500.webp",
@@ -127,9 +127,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ Mi Dài Tay Essentials Cotton",
+    name: "Men's Essentials Cotton Long-Sleeve Shirt",
     description:
-      "Chất liệu 100% Cotton mềm mại. Thoáng mát, thấm hút mồ hôi tốt. Vải có độ bền cao, không bị xù lông sau nhiều lần giặt.",
+      "Material: 100% Cotton, soft and comfortable. Breathable, sweat-absorbent, and highly durable, resists pilling even after multiple washes.",
     image1:
       "/images/essentialcotton/24CMCW.SM001.2_4_55.webp",
     image2:
@@ -143,9 +143,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ Mi Dài Tay Essentials Cotton",
+    name: "Men's Essentials Cotton Long-Sleeve Shirt",
     description:
-      "Chất liệu 100% Cotton mềm mại. Thoáng mát, thấm hút mồ hôi tốt. Vải có độ bền cao, không bị xù lông sau nhiều lần giặt.",
+      "Material: 100% Cotton, soft and comfortable. Breathable, sweat-absorbent, and highly durable, resists pilling even after multiple washes.",
     image1:
       "/images/essentialcotton2/24CMCW.SM001.16_43_19.webp",
     image2:
@@ -159,9 +159,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ Mi Dài Tay Essentials Cotton",
+    name: "Men's Essentials Cotton Long-Sleeve Shirt",
     description:
-      "Chất liệu 100% Cotton mềm mại. Thoáng mát, thấm hút mồ hôi tốt. Vải có độ bền cao, không bị xù lông sau nhiều lần giặt.",
+      "Material: 100% Cotton, soft and comfortable. Breathable, sweat-absorbent, and highly durable, resists pilling even after multiple washes.",
     image1:
       "/images/essentialcotton3/24CMCW.SM001.9_60_66.webp",
     image2:
@@ -175,9 +175,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ Mi Dài Tay Essentials Cotton",
+    name: "Men's Essentials Cotton Long-Sleeve Shirt",
     description:
-      "Chất liệu 100% Cotton mềm mại. Thoáng mát, thấm hút mồ hôi tốt. Vải có độ bền cao, không bị xù lông sau nhiều lần giặt.",
+      "Material: 100% Cotton, soft and comfortable. Breathable, sweat-absorbent, and highly durable, resists pilling even after multiple washes.",
     image1:
       "/images/essentialcotton4/24CMCW.SM001.23_3_80.webp",
     image2:
@@ -191,9 +191,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ mi dài tay Café-DriS",
+    name: "Men's Café-DriS Long-Sleeve Shirt",
     description:
-      "Chất liệu: 50% S.Café + 50% Recycled PET. Phù hợp với: đi làm, đi chơi. Kiểu dáng: Regular fit dáng suông.",
+      "Material: 50% S.Café + 50% Recycled PET. Suitable for: work or casual outings. Style: Regular fit, straight silhouette.",
     image1: "/images/cafedris/2uIMG_1077_copy.webp",
     image2: "/images/cafedris/uIMG_1035_copy.webp",
     image3: "/images/cafedris/uIMG_1059_copy.webp",
@@ -204,9 +204,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ mi dài tay Café-DriS",
+    name: "Men's Café-DriS Long-Sleeve Shirt",
     description:
-      "Chất liệu: 50% S.Café + 50% Recycled PET. Phù hợp với: đi làm, đi chơi. Kiểu dáng: Regular fit dáng suông.",
+      "Material: 50% S.Café + 50% Recycled PET. Suitable for: work or casual outings. Style: Regular fit, straight silhouette.",
     image1: "/images/cafedris2/uIMG_0963_copy.webp",
     image2: "/images/cafedris2/uIMG_0991_copy.webp",
     image3: "/images/cafedris2/IMG_1100_copy.jpg",
@@ -217,9 +217,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ mi dài tay Café-DriS",
+    name: "Men's Café-DriS Long-Sleeve Shirt",
     description:
-      "Chất liệu: 50% S.Café + 50% Recycled PET. Phù hợp với: đi làm, đi chơi. Kiểu dáng: Regular fit dáng suông.",
+      "Material: 50% S.Café + 50% Recycled PET. Suitable for: work or casual outings. Style: Regular fit, straight silhouette.",
     image1: "/images/cafedris3/somicfaqua2_48.webp",
     image2: "/images/cafedris3/132555.GD_2021_00115.webp",
     image3: "/images/cafedris3/diblueUntitled-1_65.webp",
@@ -230,9 +230,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ mi dài tay Café-DriS",
+    name: "Men's Café-DriS Long-Sleeve Shirt",
     description:
-      "Chất liệu: 50% S.Café + 50% Recycled PET. Phù hợp với: đi làm, đi chơi. Kiểu dáng: Regular fit dáng suông.",
+      "Material: 50% S.Café + 50% Recycled PET. Suitable for: work or casual outings. Style: Regular fit, straight silhouette.",
     image1: "/images/cafedris4/somicfxam4.webp",
     image2: "/images/cafedris4/somicfxam4_2.webp",
     image3: "/images/cafedris4/cfxamnhat2.webp",
@@ -243,9 +243,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sơ mi dài tay Café-DriS",
+    name: "Men's Café-DriS Long-Sleeve Shirt",
     description:
-      "Chất liệu: 50% S.Café + 50% Recycled PET. Phù hợp với: đi làm, đi chơi. Kiểu dáng: Regular fit dáng suông.",
+      "Material: 50% S.Café + 50% Recycled PET. Suitable for: work or casual outings. Style: Regular fit, straight silhouette.",
     image1: "/images/cafedris5/cae28.webp",
     image2: "/images/cafedris5/cae24.webp",
     image3: "/images/cafedris5/cae27.webp",
@@ -256,9 +256,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Thể Thao Pro Active 1595",
+    name: "Pro Active 1595 Sports Polo Shirt",
     description:
-      "Chất liệu 100% Recycled Polyester. Vải dệt Knit Interlock. Công nghệ ExDry nhanh khô thoáng mát.",
+      "Material: 100% Recycled Polyester. Knit Interlock weave. ExDry technology for quick drying and breathability.",
     image1: "/images/proactive/24CMAW.PL004.1_64.webp",
     image2: "/images/proactive/24CMAW.PL004.2.webp",
     image3: "/images/proactive/24CMAW.PL004.4_2.webp",
@@ -269,9 +269,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Thể Thao Pro Active 1595 Phối Màu",
+    name: "Pro Active 1595 Colorblock Sports Polo Shirt",
     description:
-      "Chất liệu 100% Recycled Polyester. Vải dệt Knit Interlock. Công nghệ ExDry nhanh khô thoáng mát.",
+      "Material: 100% Recycled Polyester. Knit Interlock weave. ExDry technology for quick drying and breathability.",
     image1: "/images/proactive2/24CMAW.PL005.18_82.webp",
     image2: "/images/proactive2/24CMAW.PL005.19.webp",
     image3: "/images/proactive2/24CMAW.PL005.24_13.webp",
@@ -282,9 +282,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Care & Share Hành Trình Gom",
+    name: "Care & Share Journey Polo Shirt",
     description:
-      "100% Doanh thu từ mỗi sản phẩm bán ra sẽ được dùng làm kinh phí cho Hành Trình Gom. Chất liệu: 100% Poly, định lượng vải 155gsm siêu nhẹ. Xử lý hoàn thiện vải: Quick-Dry và Wicking.",
+      "100% of revenue from each sale supports the Journey initiative. Material: 100% Polyester, 155gsm ultra-light fabric. Fabric finishing: Quick-Dry and Wicking.",
     image1: "/images/care&share/ao_polo_gom3.webp",
     image2: "/images/care&share/ao_polo_gom1.webp",
     image3: "/images/care&share/aotaggomUntitled-1_66.webp",
@@ -295,9 +295,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam Ice Cooling",
+    name: "Men's Ice Cooling Polo Shirt",
     description:
-      "Thành phần: 85% Polyamide + 15% Spandex. Vải được xử lý hoàn thiện tính năng Thấm hút (Wicking) và Nhanh khô (Ex-Dry). Đường lai tay và lai áo cắt laser được ép seam hiện đại.",
+      "Material: 85% Polyamide + 15% Spandex. Fabric finished with Wicking and Ex-Dry technologies. Laser-cut hems and modern seam bonding for a sleek look.",
     image1: "/images/icecooling/23CMCW.PL001.XDU.1_38.webp",
     image2: "/images/icecooling/23CMCW.PL001.XDU.3.webp",
     image3: "/images/icecooling/23CMCW.PL001.XDU.5_71.webp",
@@ -308,9 +308,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam Pique Cotton",
+    name: "Men's Pique Cotton Polo Shirt",
     description:
-      "Chất liệu 100% Cotton. Xử lí hoàn thiện giúp bề mặt vải ít xù lông, mềm mịn và bền màu hơn. Kiểu dệt Pique giúp áo thoáng mát.",
+      "Material: 100% Cotton. Fabric finishing reduces pilling, ensures softness, and enhances color durability. Pique weave for breathability.",
     image1: "/images/piquecotton/poloapl220.11.webp",
     image2: "/images/piquecotton/poloapl220.12.jpg",
     image3: "/images/piquecotton/APL100-thumb-6.webp",
@@ -321,9 +321,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo nam Excool",
+    name: "Men's Excool Polo Shirt",
     description:
-      "Chất liệu: 56% Polyester PET + 44% Polyester PTT Sorona. Phù hợp với: đi làm, đi chơi, mặc ở nhà. Sản xuất trực tiếp tại Quận 12, Hồ Chí Minh, Việt Nam.",
+      "Material: 56% Polyester PET + 44% Polyester PTT Sorona. Suitable for: work, casual outings, or home wear. Made in District 12, Ho Chi Minh City, Vietnam.",
     image1: "/images/excool/BT5A9235f_46.webp",
     image2: "/images/excool/BT5A9195f.webp",
     image3: "/images/excool/BT5A9195f.webp",
@@ -334,9 +334,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam Cafe",
+    name: "Men's Cafe Polo Shirt",
     description:
-      "Chất liệu: 50% S.Café + 50% Recycled PET. Công nghệ Hydroponic tăng khả năng bốc hơi nước khỏi vải, giúp nhanh khô. Phù hợp với: đi làm, đi chơi.",
+      "Material: 50% S.Café + 50% Recycled PET. Hydroponic technology enhances moisture evaporation for quick drying. Suitable for: work or casual outings.",
     image1: "/images/cafe/IMG_5250.webp",
     image2: "/images/cafe/IMG_5277.webp",
     image3: "/images/cafe/245den6-1.webp",
@@ -347,9 +347,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam Pique Cotton USA",
+    name: "Men's USA Pique Cotton Polo Shirt",
     description:
-      "Chất liệu: 97% Cotton USA + 3% Spandex, co giãn 4 chiều. Phù hợp với: đi làm, đi chơi. Tự hào sản xuất tại Việt Nam.",
+      "Material: 97% USA Cotton + 3% Spandex, 4-way stretch. Suitable for: work or casual outings. Proudly made in Vietnam.",
     image1: "/images/cottonUSA/USA_REU_1.webp",
     image2: "/images/cottonUSA/USA_REU_4.webp",
     image3: "/images/cottonUSA/USA_REU_2.jpg",
@@ -360,9 +360,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam Graphene",
+    name: "Men's Graphene Polo Shirt",
     description:
-      "Sản phẩm áo đầu tiên của Coolmate ứng dụng vật liệu mới Graphene vào công đoạn hoàn tất. Chất liệu 100% Polyester PTT, nhẹ, thoáng khí, co giãn tuyệt vời. Chiếc áo đầu tiên có 6 tính năng: Mát mẻ, Khử mùi, Chống UV, Chống tĩnh điện, Kháng khuẩn và nấm, Hút ẩm tốt.",
+      "The first polo shirt by Coolmate to incorporate Graphene in the finishing process. Material: 100% Polyester PTT, lightweight, breathable, and highly stretchable. Features 6 benefits: Cooling, Odor Control, UV Protection, Anti-Static, Antibacterial, and High Moisture Absorption.",
     image1: "/images/graphene/polographene.2.webp",
     image2: "/images/graphene/polographene.5.webp",
     image3: "/images/graphene/polographene.6.webp",
@@ -373,9 +373,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam Excool Woven",
+    name: "Men's Excool Woven Polo Shirt",
     description:
-      "Chất liệu: 53% Polyester PET high stretch + 47% Polyester PTT Sorona. Phù hợp với: đi chơi, đi làm, tham gia hoạt động lịch sự. Kiểu dáng: Regular fit dáng suông.",
+      "Material: 53% High-Stretch Polyester PET + 47% Polyester PTT Sorona. Suitable for: casual outings, work, or formal activities. Style: Regular fit, straight silhouette.",
     image1: "/images/excoolwoven/DSC00703_copy.webp",
     image2: "/images/excoolwoven/DSC00646_copy.webp",
     image3: "/images/excoolwoven/excoolsomixam_83.webp",
@@ -386,9 +386,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Giữ Nhiệt Modal Ultra",
+    name: "Modal Ultra Thermal Shirt",
     description:
-      "Chất liệu: 50% Modal (gỗ sồi), 42% Cotton, 8% Spandex. Ưu điểm của Cotton Modal: kháng khuẩn, giữ nhiệt, mềm mại và co giãn. Kiểu dáng: Slimfit ôm nhẹ vào cơ thể.",
+      "Material: 50% Modal (oak wood), 42% Cotton, 8% Spandex. Cotton Modal benefits: Antibacterial, thermal retention, softness, and stretchability. Style: Slim fit, gently hugs the body.",
     image1: "/images/modelultra/sao_giu_nhiet_trang_6.webp",
     image2:
       "/images/modelultra/Ao_giu_nhiet_-_2D_-_png.webp",
@@ -400,9 +400,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo dài tay Cotton Compact V2",
+    name: "Cotton Compact V2 Long-Sleeve Shirt",
     description:
-      "Chất liệu: 95% Cotton Compact + 5% Spandex. Bề mặt vải Cotton mềm mịn, cảm giác mát lần đầu chạm tay. Thấm hút mồ hôi tốt.",
+      "Material: 95% Compact Cotton + 5% Spandex. Cotton fabric is soft, cool to the touch, and highly sweat-absorbent.",
     image1: "/images/cottoncompactv2/ADT.CPv2.8_53.webp",
     image2: "/images/cottoncompactv2/ADT.CPv2.9.webp",
     image3: "/images/cottoncompactv2/DT003.9_64_24.webp",
@@ -413,9 +413,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Nỉ chui đầu Essentials",
+    name: "Essentials Pullover Sweatshirt",
     description:
-      "Chất liệu: vải nỉ chân cua. Thành phần: 62% Cotton + 38% Polyester. Khả năng giữ nhiệt tốt, giữ ấm cơ thể.",
+      "Material: Fleece fabric. Composition: 62% Cotton + 38% Polyester. Excellent thermal retention for warmth.",
     image1: "/images/essentials/23CMCW.ST001.2.webp",
     image2: "/images/essentials/23CMCW.ST001.5.webp",
     image3: "/images/essentials/cmcwst001.2d.3_63.webp",
@@ -426,9 +426,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Sweatshirt Thể Thao Active",
+    name: "Active Sports Sweatshirt",
     description:
-      "Thành phần: 88% Cotton + 12% Polyester. Có khả năng giữ ấm cơ thể, thấm hút. Chống nhăn và hạn chế xù lông mặt vải.",
+      "Composition: 88% Cotton + 12% Polyester. Provides warmth, sweat absorption, wrinkle resistance, and reduced fabric pilling.",
     image1: "/images/active/23CMAW.ST001.7.webp",
     image2: "/images/active/23CMAW.ST001.ah1_30.webp",
     image3: "/images/active/23CMAW.ST001.ah2_2.webp",
@@ -439,9 +439,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam dài tay Essentials",
+    name: "Men's Essentials Long-Sleeve Polo Shirt",
     description:
-      "Thành phần: 95% Cotton + 5% Spandex. Xử lí hoàn thiện giúp bề mặt vải ít xù lông, mềm mịn và bền màu hơn. Co giãn 4 chiều, mang đến sự thoải mái trong hoạt động.",
+      "Composition: 95% Cotton + 5% Spandex. Fabric finishing reduces pilling, ensures softness, and enhances color durability. 4-way stretch for comfortable movement.",
     image1: "/images/poloessentials/_CMM0498.webp",
     image2: "/images/poloessentials/_CMM0071_62.webp",
     image3: "/images/poloessentials/_CMM0092_55.webp",
@@ -452,9 +452,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo Polo Nam Dài Tay Thể Thao Essentials",
+    name: "Men's Essentials Sports Long-Sleeve Polo Shirt",
     description:
-      "Thành phần: 100% Polyester tái chế. Kiểu dệt Interlock giúp bề mặt vải thoáng khí, độ bền cao vẫn giữ sự độ mềm mại. Vải hoàn thiện công nghệ Nhanh khô (ExDry) và thấm hút (Wicking).",
+      "Composition: 100% Recycled Polyester. Interlock weave ensures breathability and durability while maintaining softness. Fabric finished with ExDry (quick-dry) and Wicking technologies.",
     image1:
       "/images/polosportessentials/23CMAW.PL001.1s6_74.webp",
     image2:
@@ -468,9 +468,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Áo dài tay tập gym Powerfit",
+    name: "Powerfit Gym Long-Sleeve Shirt",
     description:
-      "Chất liệu: 86% Polyester tái chế + 14% Spandex. Vải co giãn 4 chiều giúp bạn thoải mái thực hiện các bài tập. Vải xử lí hoàn thiện tính năng Thấm hút (Wicking) và Nhanh khô (Ex-Dry)",
+      "Material: 86% Recycled Polyester + 14% Spandex. 4-way stretch fabric for comfortable workouts. Fabric finished with Wicking and Ex-Dry technologies.",
     image1: "/images/gympowerfit/dt001.gym.14_72.webp",
     image2: "/images/gympowerfit/dt001.gym.15_16.webp",
     image3: "/images/gympowerfit/dt001.gym.16_18.webp",
@@ -481,9 +481,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam Daily Short",
+    name: "Men's Daily Short Shorts",
     description:
-      "Chất liệu: 47% Polyester Sorona + 53% Polyester. Độ dài quần: 8 inch. Nhuộm bằng công nghệ CLEANDYE tại Việt Nam",
+      "Material: 47% Polyester Sorona + 53% Polyester. Length: 8 inches. Dyed using CLEANDYE technology in Vietnam.",
     image1: "/images/DailyShort/QS.DP.15_68.webp",
     image2: "/images/DailyShort/QS.DP.16_37.webp",
     image3: "/images/DailyShort/QS.DP.20.webp",
@@ -494,9 +494,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam chạy bộ 2 lớp Essentials V2",
+    name: "Men's Essentials V2 Double-Layer Running Shorts",
     description:
-      "Vải chính: 90% Polyester + 10% Spandex. Lớp trong: 86% Polyester + 14% Spandex. Kiểu dệt Plain giúp vải mịn, nhẹ và co giãn hơn",
+      "Main fabric: 90% Polyester + 10% Spandex. Inner layer: 86% Polyester + 14% Spandex. Plain weave for a smooth, lightweight, and stretchable feel.",
     image1: "/images/Essential V2/_CMM0321_74.webp",
     image2: "/images/Essential V2/_CMM0327.webp",
     image3: "/images/Essential V2/QSRN2EF-16_12.webp",
@@ -507,9 +507,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam Gym 5 Essentials",
+    name: "Men's Gym 5 Essentials Shorts",
     description:
-      "Chất liệu: 100% Polyester. Vải hoàn thiện tính năng Thấm hút (Wicking), Co giãn (Stretch) và Nhanh khô (Quick-Dry). Co giãn 4 chiều giúp bạn thoải mái thực hiện các động tác squad",
+      "Material: 100% Polyester. Fabric finished with Wicking, Stretch, and Quick-Dry technologies. 4-way stretch for comfortable squat movements.",
     image1: "/images/Gym 5 Essentials/gym5essen.19_62.webp",
     image2: "/images/Gym 5 Essentials/gym5essen.21.webp",
     image3: "/images/Gym 5 Essentials/gym5essen.1.webp",
@@ -520,9 +520,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Short Nam Thể Thao Promax-S1",
+    name: "Men's Promax-S1 Sports Shorts",
     description:
-      "Chất liệu: 100% Poly. Xử lý hoàn thiện vải: Quick-Dry và Wicking. Phù hợp với: chơi thể thao, mặc ở nhà",
+      "Material: 100% Polyester. Fabric finishing: Quick-Dry and Wicking. Suitable for: sports or casual home wear.",
     image1: "/images/Promax-S1/-qtt.pm.6.webp",
     image2: "/images/Promax-S1/qtt.pm.v2.5.webp",
     image3: "/images/Promax-S1/qtt.pm.v2.11.webp",
@@ -533,9 +533,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam UT 9 inch",
+    name: "Men's UT 9-Inch Shorts",
     description:
-      "Thành phần: 92% Polyamide Taslan + 8% Spandex. Xử lí hoàn thiện vải với Công nghệ Ex-Dry: Nhanh khô, Thoáng khí và Độ bền cao. Vải được xử lí công nghệ Trượt nước (Water Repellent C6)",
+      "Composition: 92% Polyamide Taslan + 8% Spandex. Ex-Dry technology for quick drying, breathability, and durability. Fabric treated with Water Repellent C6 technology.",
     image1: "/images/UT 9 inch/23CMCW.QS001.4_32.webp",
     image2: "/images/UT 9 inch/23CMCW.QS001.6.webp",
     image3: "/images/UT 9 inch/23CMCW.QS001.13423.webp",
@@ -546,9 +546,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam Gym Power 2 lớp",
+    name: "Men's Gym Power Double-Layer Shorts",
     description:
-      "Vải chính: 100% Polyester. Vải lót: 86% Poly + 14% Spandex. Co giãn 4 chiều mang lại sự thoải mái để bạn vận động hết mình",
+      "Main fabric: 100% Polyester. Lining: 86% Polyester + 14% Spandex. 4-way stretch for maximum comfort during intense workouts.",
     image1:
       "/images/Gym Power/Short_hai_lop_Power_-_Reu_5.webp",
     image2:
@@ -562,9 +562,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam New French Terry V2",
+    name: "Men's New French Terry V2 Shorts",
     description:
-      "Chất liệu: 80% Cotton + 17% Polyester + 3% Spandex. Chất liệu vải cứng cáp, không nhăn, có độ co giãn. Kiểu dệt French Terry mang lại sự mát mẻ khi tiếp xúc với da.",
+      "Material: 80% Cotton + 17% Polyester + 3% Spandex. Sturdy, wrinkle-resistant fabric with stretchability. French Terry weave for a cool feel against the skin.",
     image1: "/images/Terry V2/_CMM0285_25.webp",
     image2: "/images/Terry V2/_CMM0317_38.webp",
     image3: "/images/Terry V2/terry_shorts_xam_dam_1.webp",
@@ -575,9 +575,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam Thể Thao Active logo",
+    name: "Men's Active Logo Sports Shorts",
     description:
-      "Chất liệu: 100% Polyester tái chế. Vải xử lí hoàn thiện tính năng Thấm hút (Wicking) và Nhanh khô (Ex-Dry). Chất liệu co giãn 2 chiều, thiết kế xẻ tà thoải mái vận động.",
+      "Material: 100% Recycled Polyester. Fabric finished with Wicking and Ex-Dry technologies. 2-way stretch fabric with side slits for comfortable movement.",
     image1: "/images/Active logo/CMS001.list1.webp",
     image2: "/images/Active logo/CMS001.list2.webp",
     image3: "/images/Active logo/CMS001.list3.webp",
@@ -588,9 +588,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Daily Short Excool V2",
+    name: "Daily Short Excool V2 Shorts",
     description:
-      "Chất liệu: 47% Polyester Sorona + 53% Polyester. SORONA là dòng sợi có nguồn gốc từ thực vật với nhiều ưu điểm vượt trội. Quần lưng chun có dây rút vừa vặn với cơ thể.",
+      "Material: 47% Polyester Sorona + 53% Polyester. SORONA is a plant-based fiber with superior benefits. Elastic waistband with drawstring for a snug fit.",
     image1: "/images/Excool V2/124_0.webp",
     image2: "/images/Excool V2/qsdpv210.webp",
     image3: "/images/Excool V2/qsdpv211.webp",
@@ -601,9 +601,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Thể Thao Nam 7 inch Ultra Shorts",
+    name: "Men's 7-Inch Ultra Sports Shorts",
     description:
-      "Chất liệu 100% Polyester. Kiểu dệt Woven Plain. Xử lí hoàn thiện vải Quick-Dry nhanh khô, thoáng mát. ",
+      "Material: 100% Polyester. Woven Plain weave. Quick-Dry fabric finishing for breathability and comfort.",
     image1: "/images/Ultra Shorts/QTT.7.US.reu.3_(1).webp",
     image2: "/images/Ultra Shorts/QTT.7.US.11_69.webp",
     image3: "/images/Ultra Shorts/QTT.7.US.3_15.webp",
@@ -614,9 +614,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Basics dáng Slim fit",
+    name: "Men's Basics Slim Fit Jeans",
     description:
-      "Chất liệu: Denim. Thành phần: 98% Cotton + 2% Spandex. Công nghệ Laser Marking tạo các vệt hiệu ứng chuẩn xác trên sản phẩm. ",
+      "Material: Denim. Composition: 98% Cotton + 2% Spandex. Laser Marking technology creates precise effect patterns.",
     image1: "/images/Slim Fit/23CMCW.JE002.7_72.webp",
     image2: "/images/Slim Fit/23CMCW.JE002.8.webp",
     image3: "/images/Slim Fit/23CMCW.JE002.9_33.webp",
@@ -627,9 +627,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Basics dáng Straight",
+    name: "Men's Basics Straight Jeans",
     description:
-      "Chất liệu: Denim. Thành phần: 100% Cotton. Công nghệ Laser Marking tạo các vệt hiệu ứng chuẩn xác trên sản phẩm.",
+      "Material: Denim. Composition: 100% Cotton. Laser Marking technology creates precise effect patterns.",
     image1:
       "/images/Basic Straight/23CMCW.JE003.11_52 (1).jpg",
     image2: "/images/Basic Straight/23CMCW.JE003.13_58.jpg",
@@ -641,9 +641,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Copper Denim Straight",
+    name: "Men's Copper Denim Straight Jeans",
     description:
-      "Chất liệu: 100% Cotton / 12 Oz. Dáng Straigh suông rộng phóng thoáng, thoải mái. Vải Denim được wash trước khi may nên không rút và hạn chế ra màu sau khi giặt.",
+      "Material: 100% Cotton / 12 Oz. Straight fit for a relaxed, comfortable silhouette. Pre-washed denim prevents shrinking and minimizes color bleeding after washing.",
     image1:
       "/images/Denim Straight/copperstraightdenim9.webp",
     image2:
@@ -657,9 +657,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Copper Denim OG Slim",
+    name: "Men's Copper Denim OG Slim Jeans",
     description:
-      "Chất liệu: 99% Cotton - 1% Spandex / 12 Oz. Dáng OG Slim ôm tôn dáng, ống quần từ phần đùi xuống gấu của OG rộng hơn Slim Fit. Vải Denim được wash trước khi may nên không rút và hạn chế ra màu sau khi giặt.",
+      "Material: 99% Cotton + 1% Spandex / 12 Oz. OG Slim fit with a slightly wider leg from thigh to hem compared to Slim Fit. Pre-washed denim prevents shrinking and minimizes color bleeding.",
     image1:
       "/images/OG Slim/Coolmate_x_Copper_Jeans_-_OG_Slim__-_Xanh_dam_2_copy.webp",
     image2:
@@ -673,9 +673,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Copper Denim Slim Fit",
+    name: "Men's Copper Denim Slim Fit Jeans",
     description:
-      "Chất liệu: 12 Oz / 99% Cotton + 1% Spandex. Dáng Slim Fit ôm tôn dáng, giúp bạn hack đôi chân dài và gọn đẹp. Vải Denim được wash trước khi may nên không rút và hạn chế ra màu sau khi giặt",
+      "Material: 12 Oz / 99% Cotton + 1% Spandex. Slim Fit for a flattering, leg-lengthening silhouette. Pre-washed denim prevents shrinking and minimizes color bleeding.",
     image1:
       "/images/Copper Denim/Coolmate_x_Copper_Jeans_-_Slimfit__-_Xanh_dam_3.jpg",
     image2:
@@ -689,9 +689,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam dáng Slim Fit V2",
+    name: "Men's Slim Fit V2 Jeans",
     description:
-      "Chất liệu: 78% Cotton+ 10% Polyester + 11% Rayon + 1% Spandex. 10% Polyester và 11% Rayon đảm bảo tính mềm tay. 1% Spandex để có sự co giãn, đàn hồi.",
+      "Material: 78% Cotton + 10% Polyester + 11% Rayon + 1% Spandex. 10% Polyester and 11% Rayon for softness, with 1% Spandex for stretch and elasticity.",
     image1: "/images/Slim Fit V2/_CMM0077.jpg",
     image2: "/images/Slim Fit V2/_CMM0081.jpg",
     image3: "/images/Slim Fit V2/_CMM0085.jpg",
@@ -702,9 +702,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam siêu nhẹ",
+    name: "Men's Ultra-Light Jeans",
     description:
-      "Chất liệu Denim 8.5 Oz mỏng nhẹ. Thành phần: 80% Cotton, 18% Polyester, 2% Spandex. Vải Denim được wash trước khi may, không rút và hạn chế ra màu sau khi giặt.",
+      "Material: 8.5 Oz Denim. Composition: 80% Cotton, 18% Polyester, 2% Spandex. Pre-washed denim prevents shrinking and minimizes color bleeding after washing.",
     image1: "/images/Jeans/23CMCW.JE006.2_45.webp",
     image2: "/images/Jeans/thum2423CMCW.JE006_copy.webp",
     image3: "/images/Jeans/23CMCW.JE006.11_51.webp",
@@ -715,9 +715,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam siêu nhẹ dáng Straight",
+    name: "Men's Ultra-Light Straight Jeans",
     description:
-      "Quần jeans nam siêu nhẹ của Coolmate được làm từ chất liệu denim 8.5 Oz. Đây là một trong những mẫu quần jeans có trọng lượng nhẹ nhất của Coolmate với trọng lượng trung bình chỉ 460gr. ",
+      "Coolmate's ultra-light men's jeans are made from 8.5 Oz denim, one of the lightest jeans in the collection, with an average weight of just 460g.",
     image1: "/images/1/1.1.webp",
     image2: "/images/1/1.2.webp",
     image3: "/images/1/1.3.jpg",
@@ -728,9 +728,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Basics dáng Slim fit ",
+    name: "Men's Basics Slim Fit Jeans",
     description:
-      "Chất liệu: Denim, Thành phần: 98% Cotton + 2% Spandex. Đây là sự kết hợp ưu điểm thoáng mát, thấm hút tốt của Cotton và co giãn 4 chiều của vải Spandex. Đặc biệt, thành phần vải đa số là cotton nên bề mặt quần mềm, không bị thô ráp.",
+      "Material: Denim. Composition: 98% Cotton + 2% Spandex. Combines the breathability and absorbency of cotton with the 4-way stretch of Spandex. The high cotton content ensures a soft, non-rough surface.",
     image1: "/images/2/2.1.webp",
     image2: "/images/2/2.2.webp",
     image3: "/images/2/2.3.webp",
@@ -741,9 +741,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Basics cách Hàn Quốc ",
+    name: "Men's Korean-Style Basics Jeans",
     description:
-      "Mẫu quần jean nam ống suông nhà Coolmate đang chiếm được lòng yêu thích của các đấng mày râu. Quần Jeans Basics dáng Regular Straight được làm từ chất liệu denim, kiểu dáng thẳng và rộng ở phần chân phù hợp với nhiều dáng người khác nhau, dễ dàng phối cùng mọi phong cách khác nhau.  ",
+      "Coolmate's men's straight-leg jeans are a favorite among men. The Regular Straight Basics Jeans are made from denim with a straight, wide-leg fit, suitable for various body types and easy to style with different looks.",
     image1: "/images/3/3.1.webp",
     image2: "/images/3/3.2.webp",
     image3: "/images/3/3.3.webp",
@@ -754,9 +754,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Copper Denim OG Slim ",
+    name: "Men's Copper Denim OG Slim Jeans",
     description:
-      "Quần jeans có dáng OG Slim ôm tôn dáng, ống quần từ phần đùi xuống gấu không ôm chân nên phù hợp với nhiều dáng người. Màu sắc denim cổ điển dễ mặc lại dễ dàng phối đồ, phù hợp với nhiều nhu cầu khác nhau: từ dạo phố, đi chơi đến đi làm, dự tiệc.",
+      "The OG Slim fit jeans are flattering, with a leg shape that doesn't hug the calves, making them suitable for various body types. Classic denim color is versatile and easy to style for casual outings, work, or events.",
     image1: "/images/4/4.1.webp",
     image2: "/images/4/4.2.jpg",
     image3: "/images/4/4.3.webp",
@@ -767,9 +767,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam Copper Denim Slim Fit",
+    name: "Men's Copper Denim Slim Fit Jeans",
     description:
-      "Quần Jeans Nam Copper Denim Slim Fit của Coolmate sử dụng chất liệu Cotton lên đến 99% tạo cảm giác thoáng mát. Đây chắc hẳn sẽ là người bạn đồng hành thân thiết của các bạn trong mọi tình huống.",
+      "Coolmate's Copper Denim Slim Fit Jeans are made with 99% Cotton for breathability and comfort. A reliable companion for any occasion.",
     image1: "/images/5/5.1.jpg",
     image2: "/images/5/5.2.webp",
     image3: "/images/5/5.3.jpg",
@@ -780,9 +780,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jeans Nam dáng Slim Fit V2",
+    name: "Men's Slim Fit V2 Jeans",
     description:
-      "Quần Jeans Nam dáng Slim Fit V2 sử dụng chất liệu cotton co giãn, sợi vải mềm tay tạo cảm giác thoải mái. Đây chắc hẳn là người bạn đồng hành của hầu hết các bạn nam ưa chuộng sự năng động, phóng khoáng.",
+      "Slim Fit V2 Men's Jeans are made with stretchable cotton for soft, comfortable wear. Perfect for active, dynamic men who value freedom of movement.",
     image1: "/images/6/6.1.jpg",
     image2: "/images/6/6.2.webp",
     image3: "/images/6/6.3.webp",
@@ -793,9 +793,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Dài Nam Kaki Excool",
+    name: "Men's Excool Khaki Pants",
     description:
-      "Quần có 2 màu trung tính là đen và xám, chàng có thể lựa chọn màu áo phối cho phù hợp: Quần màu đen: phối cùng áo thun đỏ, xanh lá, xanh biển, xanh navy, màu be, màu kem,... Quần màu xám: phối cùng áo thun đen, trắng, vàng,... để thêm nổi bật",
+      "Available in two neutral colors: black and gray. Pair black pants with red, green, navy, beige, or cream T-shirts. Pair gray pants with black, white, or yellow T-shirts for a standout look.",
     image1: "/images/7/7.1.webp",
     image2: "/images/7/7.2.webp",
     image3: "/images/7/7.3.webp",
@@ -806,9 +806,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Dài Nam UT Pants V2",
+    name: "Men's UT Pants V2",
     description:
-      "Thành phần: 92% Polyamide Taslan + 8% Spandex, Công nghệ Ex-Dry nhanh khô thoáng mát,Vải xử lí công nghệ Trượt nước (Water Repellent C6)Độ bền và chịu lực cao, phù hợp cho cả hoạt động ngoài trời, đi làm",
+      "Composition: 92% Polyamide Taslan + 8% Spandex. Ex-Dry technology for quick drying and breathability. Water Repellent C6 treatment for durability and suitability for outdoor activities or work.",
     image1: "/images/8/8.1.webp",
     image2: "/images/8/8.2.webp",
     image3: "/images/8/8.3.jpg",
@@ -817,12 +817,11 @@ export const PRODUCTS = [
     inStock: true,
     categories: 9,
   },
-
   {
     id: uuidv4(),
-    name: "Quần dài nam Daily Pants",
+    name: "Men's Daily Pants",
     description:
-      "Quần dài nam Daily Pants là một trong những sản phẩm nổi bật tại Coolmate. Quần được sản xuất từ sợi Sorona mang nhiều ưu điểm nổi trội mà không phải chiếc quần nào cũng sở hữu được. Được làm từ sợi sorona có nguồn gốc từ thực vật, an toàn với con người và thân thiện với môi trường. ",
+      "Coolmate's Daily Pants are a standout product, made from plant-based Sorona fibers with exceptional benefits. Safe for users and environmentally friendly.",
     image1: "/images/9/9.1.webp",
     image2: "/images/9/9.2.webp",
     image3: "/images/9/9.3.webp",
@@ -833,9 +832,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jogger Nam Thể Thao Graphenes",
+    name: "Men's Graphene Sports Jogger Pants",
     description:
-      "Quần Jogger Nam Thể Thao Graphene của Coolmate được đánh giá là item giúp nâng tầm phong cách với thiết kế năng động, thời trang, dáng jogger tôn lên vóc dáng, phù hợp mọi hoạt động đi tập thể thao, đi chơi, đi học hay đi làm. Chất liệu 100% Polyester PTT, nhẹ, thoáng khí, co giãn tuyệt vời. ",
+      "Coolmate's Graphene Sports Jogger Pants elevate style with a dynamic, trendy design and a flattering jogger fit. Made from 100% Polyester PTT, lightweight, breathable, and highly stretchable.",
     image1: "/images/10/10.1.webp",
     image2: "/images/10/10.2.webp",
     image3: "/images/10/10.3.webp",
@@ -844,12 +843,11 @@ export const PRODUCTS = [
     inStock: true,
     categories: 9,
   },
-
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam chạy bộ 2 lớp Essentials V2",
+    name: "Men's Essentials V2 Double-Layer Running Shorts",
     description:
-      "Vải chính: 90% Polyester + 10% Spandex. Lớp trong: 86% Polyester + 14% Spandex. Kiểu dệt Plain giúp vải mịn, nhẹ và co giãn hơn. Lớp trong co giãn 4 chiều mang lại sự thoải mái để bạn vận động hết mình",
+      "Main fabric: 90% Polyester + 10% Spandex. Inner layer: 86% Polyester + 14% Spandex. Plain weave for a smooth, lightweight, and stretchable feel. 4-way stretch inner layer for maximum comfort during workouts.",
     image1: "/images/11/11.1.webp",
     image2: "/images/11/11.2.webp",
     image3: "/images/11/11.3.webp",
@@ -860,9 +858,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần lót Gym Powerfit",
+    name: "Powerfit Gym Underwear",
     description:
-      "Chất liệu: 86% Poly + 14% Spandex. Co giãn 4 chiều mang lại sự thoải mái để bạn vận động hết mình.Thiết kế công thái học cải tiến giữ các đường may không bị mài mòn và tặng độ bền",
+      "Material: 86% Polyester + 14% Spandex. 4-way stretch for maximum comfort during workouts. Ergonomic design with improved seams to reduce wear and enhance durability.",
     image1: "/images/12/12.1.webp",
     image2: "/images/12/12.2.webp",
     image3: "/images/12/12.3.webp",
@@ -873,9 +871,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam Thể Thao 7",
+    name: "Men's 7-Inch Sports Shorts",
     description:
-      "Chất liệu: Chất liệu: 100% sợi Recycled Polyester, Xử lý hoàn thiện vải: Quick-Dry + Wicking + Stretch,Recycle dệt kiểu Double Weaving mang lại cảm giác Cooling khi mặc, Phù hợp với: vận động thể thao",
+      "Material: 100% Recycled Polyester. Fabric finishing: Quick-Dry, Wicking, Stretch. Double Weaving for a cooling sensation. Suitable for sports activities.",
     image1: "/images/13/13.1.webp",
     image2: "/images/13/13.2.webp",
     image3: "/images/13/13.3.webp",
@@ -886,9 +884,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam Chạy Bộ Coolmate Basics",
+    name: "Men's Coolmate Basics Running Shorts",
     description:
-      "Quần shorts nam chạy bộ Coolmate Basics hội tụ mọi ưu điểm của một chiếc quần thể thao hoàn hảo đồng hành cùng chàng trong những buổi tập chạy bộ. Với khả năng thấm hút, nhanh khô, thoáng mát, đây chắc chắn là sản phẩm Coolmate mà bạn không nên bỏ lỡ.Chất liệu: 100% Polyester thoáng mát",
+      "Coolmate Basics men's running shorts combine all the qualities of perfect sports shorts for running sessions. With excellent absorbency, quick-drying, and breathability, this is a must-have Coolmate product. Material: 100% Polyester, breathable.",
     image1: "/images/14/14.1.webp",
     image2: "/images/14/14.2.webp",
     image3: "/images/14/14.3.webp",
@@ -899,9 +897,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam chạy bộ 2 lớp Essential",
+    name: "Men's Essential Double-Layer Running Shorts",
     description:
-      "Vải chính: 43% Recycled - 57% Polyester. Lớp trong: 86% Polyester - 14% Spandex. Lớp trong co giãn 4 chiều mang lại sự thoải mái để bạn vận động hết mình",
+      "Main fabric: 43% Recycled Polyester + 57% Polyester. Inner layer: 86% Polyester + 14% Spandex. 4-way stretch inner layer for maximum comfort during workouts.",
     image1: "/images/15/15.1.webp",
     image2: "/images/15/15.2.webp",
     image3: "/images/15/15.3.webp",
@@ -912,9 +910,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam Tập Gym 6",
+    name: "Men's Gym 6-Inch Shorts",
     description:
-      "Chất liệu: 100% Cotton. Vải Cotton mềm mại, co giãn, thấm hút mồ hôi tốt. Chất liệu nhẹ, được xử lí mang lại khả năng thoáng khí",
+      "Material: 100% Cotton. Soft, stretchable, and highly absorbent cotton fabric. Lightweight material with enhanced breathability.",
     image1: "/images/16/16.1.webp",
     image2: "/images/16/16.2.webp",
     image3: "/images/16/16.3.webp",
@@ -925,9 +923,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Jogger Nam Thể Thao Graphene",
+    name: "Men's Graphene Sports Jogger Pants",
     description:
-      "Chất liệu 100% Polyester PTT, nhẹ, thoáng khí, co giãn tuyệt vời. Sản phẩm đầu tiên của Coolmate ứng dụng vật liệu mới Graphene vào công đoạn hoàn tất.",
+      "Material: 100% Polyester PTT, lightweight, breathable, and highly stretchable. The first Coolmate product to incorporate Graphene in the finishing process.",
     image1: "/images/17/17.1.webp",
     image2: "/images/17/17.2.webp",
     image3: "/images/17/17.3.webp",
@@ -938,9 +936,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts thể thao 7 Pro Active ",
+    name: "7-Inch Pro Active Sports Shorts",
     description:
-      " Chất liệu 100% Recycled Polyester.Vải dệt Knit Interlock. Công nghệ ExDry nhanh khô, thoáng mát",
+      "Material: 100% Recycled Polyester. Knit Interlock weave. ExDry technology for quick drying and breathability.",
     image1: "/images/18/18.1.webp",
     image2: "/images/18/18.2.webp",
     image3: "/images/18/18.3.webp",
@@ -951,9 +949,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Jogger thể thao",
+    name: "Sports Jogger Pants",
     description:
-      "Chất liệu 100% Polyester PTT, đảm bảo nhẹ, thoáng khí, co giãn tuyệt vời. Dáng quần Slimfit, bạn có thể chọn tăng thêm 1 size",
+      "Material: 100% Polyester PTT, lightweight, breathable, and highly stretchable. Slim fit design; consider sizing up for a looser fit.",
     image1: "/images/19/19.1.webp",
     image2: "/images/19/19.2.webp",
     image3: "/images/19/19.3.webp",
@@ -964,9 +962,9 @@ export const PRODUCTS = [
   },
   {
     id: uuidv4(),
-    name: "Quần Shorts Nam chạy bộ Advanced",
+    name: "Men's Advanced Running Shorts",
     description:
-      "Chất liệu: 89% Recycled Polyester - 11% Spandex. Xử lý hoàn thiện vải: Quick-Dry + Wicking + Stretch.",
+      "Material: 89% Recycled Polyester + 11% Spandex. Fabric finishing: Quick-Dry, Wicking, Stretch.",
     image1: "/images/20/20.1.webp",
     image2: "/images/20/20.2.webp",
     image3: "/images/20/20.3.webp",

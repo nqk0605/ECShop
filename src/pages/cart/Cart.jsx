@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/cartContext/cartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const {
     cart,
     increaseProduct,
@@ -15,25 +16,48 @@ const Cart = () => {
     resetCart,
   } = useCart();
 
+  const [selectedItems, setSelectedItems] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleItemSelect = (productId) => {
+    setSelectedItems((prev) => ({
+      ...prev,
+      [productId]: !prev[productId],
+    }));
+  };
+
+  const selectedProducts = cart.filter(
+    (item) => selectedItems[item.id]
+  );
+
   const totalPrice = Number(
-    cart
+    selectedProducts
       .reduce((a, b) => a + b.price * b.quantity, 0)
       .toFixed(2)
   );
 
   const handlePay = () => {
-    toast.success("Pay Successfully!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-    });
-    resetCart();
+    if (selectedProducts.length === 0) {
+      toast.error(
+        "Please select at least one product to checkout!"
+      );
+      return;
+    }
+    setIsLoading(true);
+    // Simulate loading for better UX
+    setTimeout(() => {
+      navigate("/checkout", {
+        state: {
+          selectedProducts,
+          totalPrice,
+        },
+      });
+    }, 800);
   };
 
   return (
     <Fragment>
-      <Loader />
+      {isLoading && <Loader />}
       <ToastContainer />
       <Helmet>
         <title>Cart - MenWear</title>
@@ -65,8 +89,24 @@ const Cart = () => {
                           </div>
                           <div className="col-9">
                             <div className="d-flex w-100 align-items-center">
-                              <div className="flex-grow-1">
-                                <h1 className="fs-4 fw-bold">
+                              <div className="flex-grow-1 d-flex align-items-center">
+                                <div className="form-check me-3">
+                                  <input
+                                    type="checkbox"
+                                    className="form-check-input"
+                                    checked={
+                                      selectedItems[
+                                        product.id
+                                      ] || false
+                                    }
+                                    onChange={() =>
+                                      handleItemSelect(
+                                        product.id
+                                      )
+                                    }
+                                  />
+                                </div>
+                                <h1 className="fs-4 fw-bold mb-0">
                                   <span className="text-decoration-none text-black">
                                     {product.name}
                                   </span>
@@ -85,7 +125,7 @@ const Cart = () => {
                                 </button>
                               </div>
                             </div>
-                            <div className="d-flex justify-content-between align-items-center">
+                            <div className="d-flex justify-content-between align-items-center mt-2">
                               <div className="d-flex">
                                 <h1 className="fs-5 fw-bold">
                                   {product.price + "$"}
@@ -110,36 +150,43 @@ const Cart = () => {
                                   </div>
                                 </div>
                               </div>
-                              <div className="d-flex p-1 cart-item-controller rounded-pill fs-6 align-items-center">
-                                <div className="mx-1">
-                                  <button
-                                    className="btn fs-5 rounded-pill"
-                                    onClick={() =>
-                                      increaseProduct(
-                                        product.id
-                                      )
-                                    }
-                                  >
-                                    <i className="bi bi-plus" />
-                                  </button>
-                                </div>
-                                <div className="mx-1 text-secondary">
-                                  {product.quantity}
-                                </div>
-                                <div className="mx-1">
-                                  <button
-                                    className="btn fs-5 rounded-pill"
-                                    onClick={() =>
-                                      decreaseProduct(
-                                        product.id
-                                      )
-                                    }
-                                    disabled={
-                                      product.quantity === 0
-                                    }
-                                  >
-                                    <i className="bi bi-dash" />
-                                  </button>
+                              <div className="d-flex align-items-center">
+                                <span className="me-3 text-secondary">
+                                  Size:{" "}
+                                  {product.size || "M"}
+                                </span>
+                                <div className="d-flex">
+                                  <div className="mx-1">
+                                    <button
+                                      className="btn fs-5 rounded-pill"
+                                      onClick={() =>
+                                        increaseProduct(
+                                          product.id
+                                        )
+                                      }
+                                    >
+                                      <i className="bi bi-plus" />
+                                    </button>
+                                  </div>
+                                  <div className="mx-1 text-secondary">
+                                    {product.quantity}
+                                  </div>
+                                  <div className="mx-1">
+                                    <button
+                                      className="btn fs-5 rounded-pill"
+                                      onClick={() =>
+                                        decreaseProduct(
+                                          product.id
+                                        )
+                                      }
+                                      disabled={
+                                        product.quantity ===
+                                        0
+                                      }
+                                    >
+                                      <i className="bi bi-dash" />
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -159,13 +206,22 @@ const Cart = () => {
                   <div className="order-price">
                     <div className="w-100 d-flex mt-4 my-2 fs-5">
                       <div className="flex-grow-1">
+                        Selected Items
+                      </div>
+                      <div className="text-secondary">
+                        {selectedProducts.length} /{" "}
+                        {cart.length}
+                      </div>
+                    </div>
+                    <div className="w-100 d-flex mt-4 my-2 fs-5">
+                      <div className="flex-grow-1">
                         Total Price
                       </div>
                       <div className="text-secondary">
                         {totalPrice + " $"}
                       </div>
                     </div>
-                    {cart.length > 0 && (
+                    {selectedProducts.length > 0 && (
                       <div className="w-100 d-flex my-3 fs-5">
                         <div className="flex-grow-1">
                           Shipment cost
@@ -183,23 +239,37 @@ const Cart = () => {
                       <div className="text-secondary">
                         {`${
                           totalPrice +
-                          (cart.length > 0 ? 3 : 0)
+                          (selectedProducts.length > 0
+                            ? 3
+                            : 0)
                         } $`}
                       </div>
                     </div>
-                    <div className="w-100 mt-4 my-2 fs-5">
-                      <Link
-                        to="#"
+                    <div className="w-100 mt-4 my-2">
+                      <button
                         className={`btn main-btn text-white w-100 px-6 py-3 rounded-pill ${
-                          cart.length === 0
+                          selectedProducts.length === 0
                             ? "disabled"
                             : ""
                         }`}
                         onClick={handlePay}
+                        disabled={
+                          selectedProducts.length === 0 ||
+                          isLoading
+                        }
                       >
-                        Pay &nbsp;
-                        <i className="bi bi-arrow-left" />
-                      </Link>
+                        {isLoading ? (
+                          <span>
+                            <i className="bi bi-hourglass-split me-2"></i>
+                            Processing...
+                          </span>
+                        ) : (
+                          <span>
+                            Proceed to Checkout
+                            <i className="bi bi-arrow-right ms-2"></i>
+                          </span>
+                        )}
+                      </button>
                     </div>
                   </div>
                 </div>

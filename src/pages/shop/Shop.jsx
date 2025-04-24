@@ -335,15 +335,15 @@ const Shop = () => {
                             <h6 className="mt-3">
                               {product.name}
                             </h6>
-                            <div className="d-flex px-1 position-absolute bottom-0">
+                            <div className="d-flex align-items-center gap-2 px-1 position-absolute bottom-0">
                               <div
-                                className="mx-1 fw-bold"
+                                className="fw-bold"
                                 data-item-type="price"
                               >
                                 {`${product.price}$`}
                               </div>
-                              <div className="mx-1">
-                                <strike>
+                              <div className="d-flex align-items-center">
+                                <strike className="text-secondary">
                                   {Math.round(
                                     product.price /
                                       (1 -
@@ -351,7 +351,7 @@ const Shop = () => {
                                   ) + "$"}
                                 </strike>
                               </div>
-                              <div className="mx-1">
+                              <div>
                                 <span className="bg-danger-subtle rounded-pill px-2 py-1">
                                   {Math.round(
                                     product.percentSalesOff *
