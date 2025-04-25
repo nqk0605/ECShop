@@ -19,15 +19,16 @@ const Cart = () => {
   const [selectedItems, setSelectedItems] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleItemSelect = (productId) => {
+  const handleItemSelect = (productId, size) => {
+    const key = `${productId}-${size}`;
     setSelectedItems((prev) => ({
       ...prev,
-      [productId]: !prev[productId],
+      [key]: !prev[key],
     }));
   };
 
   const selectedProducts = cart.filter(
-    (item) => selectedItems[item.id]
+    (item) => selectedItems[`${item.id}-${item.size}`]
   );
 
   const totalPrice = Number(
@@ -62,17 +63,17 @@ const Cart = () => {
       <Helmet>
         <title>Cart - MenWear</title>
       </Helmet>
-      <div className="container-fluid p-0">
+      <div className="container-fluid p-0 min-vh-100">
         <section className="container mb-5">
           <div className="cart">
             <div className="row">
               <div className="cart-main col-md-7 my-2">
                 <div className="rounded-4 border border-1 py-3 px-4 position-relative overflow-x-hidden">
-                  {cart.length > 0 &&
+                  {cart.length > 0 ? (
                     cart.map((product) => (
                       <div
                         className="cart-item position-relative rounded-4 px-1 my-2 py-1"
-                        key={product.id}
+                        key={`${product.id}-${product.size}`}
                       >
                         <div className="row align-items-center">
                           <div className="col-3">
@@ -96,12 +97,13 @@ const Cart = () => {
                                     className="form-check-input"
                                     checked={
                                       selectedItems[
-                                        product.id
+                                        `${product.id}-${product.size}`
                                       ] || false
                                     }
                                     onChange={() =>
                                       handleItemSelect(
-                                        product.id
+                                        product.id,
+                                        product.size
                                       )
                                     }
                                   />
@@ -117,7 +119,8 @@ const Cart = () => {
                                   className="btn fs-4 text-danger del-btn"
                                   onClick={() =>
                                     deleteProduct(
-                                      product.id
+                                      product.id,
+                                      product.size
                                     )
                                   }
                                 >
@@ -161,7 +164,8 @@ const Cart = () => {
                                       className="btn fs-5 rounded-pill"
                                       onClick={() =>
                                         increaseProduct(
-                                          product.id
+                                          product.id,
+                                          product.size
                                         )
                                       }
                                     >
@@ -176,7 +180,8 @@ const Cart = () => {
                                       className="btn fs-5 rounded-pill"
                                       onClick={() =>
                                         decreaseProduct(
-                                          product.id
+                                          product.id,
+                                          product.size
                                         )
                                       }
                                       disabled={
@@ -193,7 +198,12 @@ const Cart = () => {
                           </div>
                         </div>
                       </div>
-                    ))}
+                    ))
+                  ) : (
+                    <div className="text-center">
+                      <p>No products in the cart.</p>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="col-md-5 my-2">

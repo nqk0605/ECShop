@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useCart } from "../../context/cartContext/cartContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -14,9 +14,14 @@ function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   // Get selected products from navigation state
-  const selectedProducts =
-    location.state?.selectedProducts || [];
-  const totalPrice = location.state?.totalPrice || 0;
+  const selectedProducts = useMemo(
+    () => location.state?.selectedProducts || [],
+    [location.state]
+  );
+  const totalPrice = useMemo(
+    () => location.state?.totalPrice || 0,
+    [location.state]
+  );
 
   useEffect(() => {
     // If no products were selected, redirect back to cart
@@ -27,6 +32,50 @@ function Checkout() {
 
   const handlePlaceOrder = (e) => {
     e.preventDefault();
+    console.log("Form submitted");
+
+    // Get all required form inputs
+    const form = e.target;
+    const requiredInputs = form.querySelectorAll(
+      "input[required], select[required]"
+    );
+    console.log("Required inputs:", requiredInputs.length);
+    let emptyFields = [];
+
+    requiredInputs.forEach((input) => {
+      console.log(
+        "Checking input:",
+        input.name,
+        input.value
+      );
+      if (!input.value.trim()) {
+        const label =
+          input.previousElementSibling?.textContent
+            ?.trim()
+            .replace(" *", "") || "Required field";
+        emptyFields.push(label);
+        input.classList.add("is-invalid");
+      } else {
+        input.classList.remove("is-invalid");
+      }
+    });
+
+    console.log("Empty fields:", emptyFields);
+    if (emptyFields.length > 0) {
+      toast.error(
+        `Please fill in the following required fields: ${emptyFields.join(
+          ", "
+        )}`,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+        }
+      );
+      return;
+    }
+
     setIsProcessing(true);
 
     // Simulate order processing
@@ -207,6 +256,23 @@ function Checkout() {
                 />
               </div>
             </div>
+            <button
+              type="submit"
+              className="btn main-btn text-white px-5 py-3 mt-4 w-100"
+              disabled={isProcessing}
+            >
+              {isProcessing ? (
+                <span>
+                  <i className="bi bi-hourglass-split me-2"></i>
+                  Processing Order...
+                </span>
+              ) : (
+                <span>
+                  PLACE ORDER
+                  <i className="bi bi-arrow-right ms-2"></i>
+                </span>
+              )}
+            </button>
           </form>
         </div>
 
@@ -325,25 +391,6 @@ function Checkout() {
                 Cash on delivery
               </label>
             </div>
-
-            <button
-              type="submit"
-              className="btn main-btn text-white px-5 py-3 mt-4 w-100"
-              disabled={isProcessing}
-              onClick={handlePlaceOrder}
-            >
-              {isProcessing ? (
-                <span>
-                  <i className="bi bi-hourglass-split me-2"></i>
-                  Processing Order...
-                </span>
-              ) : (
-                <span>
-                  PLACE ORDER
-                  <i className="bi bi-arrow-right ms-2"></i>
-                </span>
-              )}
-            </button>
           </div>
         </div>
       </div>

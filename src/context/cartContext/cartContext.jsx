@@ -21,15 +21,21 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setCart((prev) => {
-      let isExistedProductId = null;
+      let isExistedProduct = null;
       prev.forEach((prod) => {
-        if (prod.id === product.id) {
-          isExistedProductId = prod.id;
+        if (
+          prod.id === product.id &&
+          prod.size === product.size
+        ) {
+          isExistedProduct = prod;
         }
       });
-      if (isExistedProductId !== null) {
+      if (isExistedProduct !== null) {
         const newCart = prev.map((prod) => {
-          if (prod.id === isExistedProductId) {
+          if (
+            prod.id === isExistedProduct.id &&
+            prod.size === isExistedProduct.size
+          ) {
             return { ...prod, quantity: prod.quantity + 1 };
           } else {
             return prod;
@@ -51,10 +57,10 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const increaseProduct = (productId) => {
+  const increaseProduct = (productId, size) => {
     setCart((prev) => {
       const newCart = prev.map((prod) => {
-        if (prod.id === productId) {
+        if (prod.id === productId && prod.size === size) {
           return { ...prod, quantity: prod.quantity + 1 };
         } else return prod;
       });
@@ -63,10 +69,10 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const decreaseProduct = (productId) => {
+  const decreaseProduct = (productId, size) => {
     setCart((prev) => {
       const newCart = prev.map((prod) => {
-        if (prod.id === productId) {
+        if (prod.id === productId && prod.size === size) {
           return { ...prod, quantity: prod.quantity - 1 };
         } else return prod;
       });
@@ -82,10 +88,11 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const deleteProduct = (productId) => {
+  const deleteProduct = (productId, size) => {
     setCart((prev) => {
       const newCart = prev.filter(
-        (prod) => prod.id !== productId
+        (prod) =>
+          !(prod.id === productId && prod.size === size)
       );
       localStorage.setItem("cart", JSON.stringify(newCart));
       return newCart;
