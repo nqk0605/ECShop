@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BRANDS_BANNER } from "../../constants/common.constant";
 import { TOP_ITEMS } from "../../constants/common.constant";
 import Loader from "../../components/Loader/Loader";
 import { PRODUCTS } from "../../../public/data/data";
@@ -9,7 +8,6 @@ import { Helmet } from "react-helmet";
 
 const Home = () => {
   const navigate = useNavigate();
-
   return (
     <Fragment>
       <Loader />
@@ -51,22 +49,6 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-7 hero-main-img h-100" />
-          </div>
-        </div>
-      </div>
-      <div className="brand-menu py-4">
-        <div className="container">
-          <div className="row align-items-center fs-1 justify-content-center">
-            {BRANDS_BANNER.map((brand) => (
-              <div
-                className="text-center col-6 col-md-3 my-2"
-                key="{brand.id}"
-              >
-                <a href="#">
-                  <img src={brand.img} alt={brand.name} />
-                </a>
-              </div>
-            ))}
           </div>
         </div>
       </div>
